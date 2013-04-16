@@ -103,6 +103,10 @@ amm-info@iis.fraunhofer.de
 
 #if defined(__arm__)
 #include "arm/block_arm.cpp"
+
+#elif defined(__mips__)
+#include "mips/block_mips.cpp"
+
 #endif
 
 /*!
@@ -211,6 +215,7 @@ AAC_DECODER_ERROR CBlock_ReadScaleFactorData(
   return AAC_DEC_OK;
 }
 
+#if !defined (FUNCTION_CBlock_ScaleSpectralData)
 void CBlock_ScaleSpectralData(CAacDecoderChannelInfo *pAacDecoderChannelInfo, SamplingRateInfo *pSamplingRateInfo)
 {
   int band;
@@ -268,6 +273,7 @@ void CBlock_ScaleSpectralData(CAacDecoderChannelInfo *pAacDecoderChannelInfo, Sa
   }
 
 }
+#endif /* #if !defined (FUNCTION_CBlock_ScaleSpectralData) */
 
 AAC_DECODER_ERROR CBlock_ReadSectionData(HANDLE_FDK_BITSTREAM bs,
                                          CAacDecoderChannelInfo *pAacDecoderChannelInfo,
@@ -373,6 +379,7 @@ AAC_DECODER_ERROR CBlock_ReadSectionData(HANDLE_FDK_BITSTREAM bs,
 
 /* mso: provides a faster way to i-quantize a whole band in one go */
 
+#if !defined (FUNCTION_InverseQuantizeBand)
 /**
  * \brief inverse quantize one sfb. Each value of the sfb is processed according to the
  *        formula: spectrum[i] = Sign(spectrum[i]) * Matissa(spectrum[i])^(4/3) * 2^(lsb/4).
@@ -422,6 +429,7 @@ void InverseQuantizeBand( FIXP_DBL * RESTRICT spectrum,
         }
     }
 }
+#endif /* #if !defined (FUNCTION_InverseQuantizeBand) */
 
 AAC_DECODER_ERROR CBlock_InverseQuantizeSpectralData(CAacDecoderChannelInfo *pAacDecoderChannelInfo, SamplingRateInfo *pSamplingRateInfo)
 {
@@ -666,7 +674,9 @@ void ApplyTools ( CAacDecoderChannelInfo *pAacDecoderChannelInfo[],
           );
 }
 
+#if !defined (FUNCTION_CBlock_FrequencyToTime)
 static
+#endif
 int getWindow2Nr(int length, int shape)
 {
   int nr = 0;
@@ -679,6 +689,7 @@ int getWindow2Nr(int length, int shape)
   return nr;
 }
 
+#if !defined (FUNCTION_CBlock_FrequencyToTime)
 void CBlock_FrequencyToTime(CAacDecoderStaticChannelInfo *pAacDecoderStaticChannelInfo,
                             CAacDecoderChannelInfo *pAacDecoderChannelInfo,
                             INT_PCM outSamples[],
@@ -746,6 +757,7 @@ void CBlock_FrequencyToTime(CAacDecoderStaticChannelInfo *pAacDecoderStaticChann
   FDK_ASSERT(nSamples == frameLen);
 
 }
+#endif /* #if !defined (FUNCTION_CBlock_FrequencyToTime) */
 
 #include "ldfiltbank.h"
 void CBlock_FrequencyToTimeLowDelay( CAacDecoderStaticChannelInfo *pAacDecoderStaticChannelInfo,

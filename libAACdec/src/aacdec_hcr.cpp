@@ -1392,11 +1392,21 @@ static const SCHAR *DecodePCW_Body(HANDLE_FDK_BITSTREAM  bs,
 
   /* decode whole PCW-codeword-body */
   while (1) {
-
+#if defined(MIPS32_LE)
+    INT    readBitOffset;
+    readBitOffset = *pLeftStartOfSegment-FDKgetBitCnt(bs);
+    if( readBitOffset ) {
+      FDKpushFor(bs, readBitOffset) ;
+    }
+    carryBit = FDKreadBits(bs, 1);
+    *pLeftStartOfSegment += 1;
+#else
     carryBit = HcrGetABitFromBitstream(bs,
                                        pLeftStartOfSegment,
                                        pLeftStartOfSegment,                 /* dummy */
                                        FROM_LEFT_TO_RIGHT);
+
+#endif /* #if defined(MIPS32_LE) */
     *pRemainingBitsInSegment -= 1;
     *pNumDecodedBits += 1;
 
@@ -1507,10 +1517,21 @@ static int DecodePCW_Sign(HANDLE_FDK_BITSTREAM  bs,
   for( i=codebookDim; i != 0 ; i-- ) {
     quantSpecCoef = *pQuantVal++;
     if (quantSpecCoef != 0) {
+#if defined(MIPS32_LE)
+      int    readBitOffset;
+      readBitOffset = *pLeftStartOfSegment-FDKgetBitCnt(bs);
+      if( readBitOffset ) {
+        FDKpushFor(bs, readBitOffset) ;
+      }
+      carryBit = FDKreadBits(bs, 1);
+      *pLeftStartOfSegment += 1;
+#else
       carryBit = HcrGetABitFromBitstream(bs,
                                          pLeftStartOfSegment,
                                          pLeftStartOfSegment,    /* dummy */
                                          FROM_LEFT_TO_RIGHT);
+
+#endif /* #if defined(MIPS32_LE) */
       *pRemainingBitsInSegment -= 1;
       *pNumDecodedBits += 1;
       if (*pRemainingBitsInSegment < 0 || *pNumDecodedBits >= (1024>>1)) {

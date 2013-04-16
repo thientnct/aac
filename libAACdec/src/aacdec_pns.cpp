@@ -99,6 +99,10 @@ amm-info@iis.fraunhofer.de
 
 #include "genericStds.h"
 
+#if defined(__mips__)
+#include "mips/aacdec_pns_mips.cpp"
+#endif
+
 
 #define NOISE_OFFSET 90           /* cf. ISO 14496-3 p. 175 */
 
@@ -245,7 +249,7 @@ void CPns_Read (CPnsData *pPnsData,
   pPnsData->pnsUsed[pns_band] = 1;
 }
 
-
+#if !defined (FUNCTION_GenerateRandomVector)
 /**
  * \brief Generate a vector of noise of given length. The noise values are
  *        scaled in order to yield a noise energy of 1.0
@@ -288,7 +292,9 @@ static int GenerateRandomVector (FIXP_DBL *RESTRICT spec,
 
   return invNrg_e;
 }
+#endif /* #if !defined (FUNCTION_GenerateRandomVector) */
 
+#if !defined (FUNCTION_ScaleBand)
 static void ScaleBand (FIXP_DBL *RESTRICT spec, int size, int scaleFactor, int specScale, int noise_e, int out_of_phase)
 {
   int i, shift, sfExponent;
@@ -320,7 +326,7 @@ static void ScaleBand (FIXP_DBL *RESTRICT spec, int size, int scaleFactor, int s
     }
   }
 }
-
+#endif /* #if !defined (FUNCTION_ScaleBand) */
 
 /*!
   \brief Apply PNS

@@ -95,6 +95,44 @@ amm-info@iis.fraunhofer.de
 
 #if defined(FUNCTION_scramble)
 inline void scramble(FIXP_DBL *x, INT n) {
+#if defined(MIPS32_LE)
+  INT m,j,temp11;
+
+  __asm__ volatile(
+    "clz        %[temp11],  %[n]                   \n\t"
+    "addiu      %[temp11],  %[temp11],  -15        \n\t"
+
+    : [temp11] "=&r" (temp11)
+    : [n] "r" (n)
+  );
+
+  for (m=1,j=0; m<n-1; m++)
+  {
+    j = __builtin_mips_bitrev(m) >> (temp11);
+    FIXP_DBL *tmp_pok_m = &x[2*m];
+    FIXP_DBL *tmp_pok_j = &x[2*j];
+    if (j>m)
+    {
+      FIXP_DBL temp1,temp2,temp3,temp4;
+
+      __asm__ volatile(
+        "lw        %[temp1],   0(%[tmp_pok_m])                   \n\t"
+        "lw        %[temp2],   0(%[tmp_pok_j])                   \n\t"
+        "lw        %[temp3],   4(%[tmp_pok_m])                   \n\t"
+        "lw        %[temp4],   4(%[tmp_pok_j])                   \n\t"
+        "sw        %[temp1],   0(%[tmp_pok_j])                   \n\t"
+        "sw        %[temp2],   0(%[tmp_pok_m])                   \n\t"
+        "sw        %[temp3],   4(%[tmp_pok_j])                   \n\t"
+        "sw        %[temp4],   4(%[tmp_pok_m])                   \n\t"
+
+        : [temp1] "=&r" (temp1), [temp2] "=&r" (temp2),
+          [temp3] "=&r" (temp3), [temp4] "=&r" (temp4)
+        : [tmp_pok_j] "r" (tmp_pok_j), [tmp_pok_m] "r" (tmp_pok_m)
+        : "memory"
+      );
+    }
+  }
+#else /* #if defined(MIPS32_LE) */
   INT m,j;
   int ldn=1;
   do {ldn++;} while((1<<ldn)<n);
@@ -115,6 +153,7 @@ inline void scramble(FIXP_DBL *x, INT n) {
       x[2*j+1]=tmp;
     }
   }
+#endif /* #if defined(MIPS32_LE) */
 }
 #endif
 

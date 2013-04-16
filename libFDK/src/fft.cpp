@@ -93,7 +93,9 @@ amm-info@iis.fraunhofer.de
 #include "fft_rad2.h"
 #include "FDK_tools_rom.h"
 
-
+#if defined(__mips__)
+#include "mips/fft_mips.cpp"
+#endif
 
 
 

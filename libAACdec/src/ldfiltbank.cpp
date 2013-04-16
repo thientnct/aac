@@ -99,6 +99,11 @@ amm-info@iis.fraunhofer.de
 
 #define LDFB_HEADROOM 2
 
+#if defined(__mips__)
+#include "mips/ldfiltbank_mips.cpp"
+#endif
+
+#ifndef FUNCTION_multE2_DinvF_fdk
 static void multE2_DinvF_fdk(INT_PCM *output, FIXP_DBL* x, const FIXP_WTB* fb, FIXP_DBL* z, const int N, const int  stride)
 {
   int i, scale;
@@ -168,7 +173,7 @@ static void multE2_DinvF_fdk(INT_PCM *output, FIXP_DBL* x, const FIXP_WTB* fb, F
 #endif
   }
 }
-
+#endif /* #ifndef FUNCTION_multE2_DinvF_fdk */
 int InvMdctTransformLowDelay_fdk (FIXP_DBL *mdctData, const int mdctData_e, INT_PCM *output, FIXP_DBL *fs_buffer, const int stride, const int N) {
 
   const FIXP_WTB *coef;

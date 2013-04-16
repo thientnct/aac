@@ -101,7 +101,21 @@ amm-info@iis.fraunhofer.de
 inline INT fixmuldiv2_DD (const INT a, const INT b)
 {
   INT result ;
+
+#if defined(MIPS32_LE)
+  __asm__ volatile (
+      "mult %[a],      %[b]           \n\t"
+      "mfhi %[result]                 \n\t"
+
+      : [result] "=&r" (result)
+      : [a] "r" (a), [b] "r" (b)
+      : "hi", "lo"
+  );
+
+#else
   result = ((long long)a * b)>>32;
+#endif /* #if defined(MIPS32_LE) */
+
   return result ;
 }
 

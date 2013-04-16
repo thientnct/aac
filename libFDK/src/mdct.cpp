@@ -95,6 +95,10 @@ amm-info@iis.fraunhofer.de
 #include "dct.h"
 #include "fixpoint_math.h"
 
+#if defined(__mips__)
+#include "mips/mdct_mips.cpp"
+#endif
+
 
 void mdct_init( H_MDCT hMdct,
                 FIXP_DBL *overlap,
@@ -245,6 +249,7 @@ void imdct_adapt_parameters(H_MDCT hMdct, int *pfl, int *pnl, int tl, const FIXP
   *pnl = nl;
 }
 
+#ifndef FUNCTION_imdct_block
 INT  imdct_block(
         H_MDCT hMdct,
         FIXP_DBL *output,
@@ -382,4 +387,4 @@ INT  imdct_block(
 
   return nrSamples;
 }
-
+#endif /* FUNCTION_imdct_block */

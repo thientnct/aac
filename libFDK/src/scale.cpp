@@ -100,7 +100,7 @@ amm-info@iis.fraunhofer.de
 
 
 #if defined(__mips__)	/* cppp replaced: elif */
-#include "mips/scale.cpp"
+#include "mips/scale_mips.cpp"
 
 #elif defined(__arm__)
 #include "arm/scale_arm.cpp"

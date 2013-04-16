@@ -107,6 +107,26 @@ inline void cplxMultDiv2( FIXP_DBL *c_Re,
                           FIXP_DBL  b_Re,
                           FIXP_DBL  b_Im)
 {
+#if defined(MIPS_DSP_R1_LE)
+  INT result,result1;
+
+  __asm__ volatile(
+    "mult $ac0,      %[a_Re], %[b_Re]     \n\t"
+    "msub $ac0,      %[a_Im], %[b_Im]     \n\t"
+    "mult $ac1,      %[a_Re], %[b_Im]     \n\t"
+    "madd $ac1,      %[a_Im], %[b_Re]     \n\t"
+    "mfhi %[result] ,$ac0                 \n\t"
+    "mfhi %[result1],$ac1                 \n\t"
+
+    : [result]"=&r"(result), [result1]"=&r"(result1)
+    : [a_Re]"r"(a_Re), [b_Re]"r"(b_Re),  [a_Im]"r"(a_Im), [b_Im]"r"(b_Im)
+    : "hi", "lo", "$ac1hi", "$ac1lo"
+  );
+
+  *c_Re = result;
+  *c_Im = result1;
+
+#else /* #if defined(MIPS_DSP_R1_LE) */
   INT result;
 
    __asm__ ("mult %[a_Re], %[b_Re];\n"
@@ -121,10 +141,11 @@ inline void cplxMultDiv2( FIXP_DBL *c_Re,
    __asm__ ("mult %[a_Re], %[b_Im];\n"
             "madd %[a_Im], %[b_Re];\n"
             "mfhi %[result];\n"
-       : [result]"=r"(result) 
+       : [result]"=r"(result)
        : [a_Re]"r"(a_Re), [b_Im]"r"(b_Im), [a_Im]"r"(a_Im), [b_Re]"r"(b_Re)
        : "lo");
    *c_Im = result;
+#endif /* #if defined(MIPS_DSP_R1_LE) */
 }
 #endif
 
@@ -136,6 +157,25 @@ inline void cplxMult( FIXP_DBL *c_Re,
                       FIXP_DBL  b_Re,
                       FIXP_DBL  b_Im)
 {
+#if defined(MIPS_DSP_R1_LE)
+  INT result,result1;
+
+  __asm__ volatile(
+    "mult $ac0,      %[a_Re], %[b_Re]     \n\t"
+    "msub $ac0,      %[a_Im], %[b_Im]     \n\t"
+    "mult $ac1,      %[a_Re], %[b_Im]     \n\t"
+    "madd $ac1,      %[a_Im], %[b_Re]     \n\t"
+    "mfhi %[result], $ac0                 \n\t"
+    "mfhi %[result1],$ac1                 \n\t"
+
+    : [result]"=&r"(result), [result1]"=&r"(result1)
+    : [a_Re]"r"(a_Re), [b_Re]"r"(b_Re), [a_Im]"r"(a_Im), [b_Im]"r"(b_Im)
+    : "hi", "lo", "$ac1hi", "$ac1lo"
+  );
+
+  *c_Re = result<<1;
+  *c_Im = result1<<1;
+#else /* #if defined(MIPS_DSP_R1_LE) */
   INT result;
 
    __asm__ ("mult %[a_Re], %[b_Re];\n"
@@ -155,6 +195,7 @@ inline void cplxMult( FIXP_DBL *c_Re,
         : [a_Re]"r"(a_Re), [b_Im]"r"(b_Im), [a_Im]"r"(a_Im), [b_Re]"r"(b_Re)
         : "lo");
    *c_Im = result<<1;
+#endif /* #if defined(MIPS_DSP_R1_LE) */
 }
 #endif
 

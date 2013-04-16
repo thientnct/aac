@@ -81,39 +81,49 @@ www.iis.fraunhofer.de/amm
 amm-info@iis.fraunhofer.de
 ----------------------------------------------------------------------------------------------------------- */
 
-/***************************  Fraunhofer IIS FDK Tools  **********************
+/***************************  Fraunhofer IIS FDK Tools  ***********************
 
    Author(s):
-   Description:
+   Description: common bitbuffer read/write routines
 
 ******************************************************************************/
 
-#if defined(__mips_dsp)
+#if defined(MIPS_DSP_R2_LE)
+#define FUNCTION_FDK_get
+#endif /* #if defined(MIPS_DSP_R2_LE) */
 
-#ifndef FUNCTION_getScalefactor_DBL
-#define FUNCTION_getScalefactor_DBL
-/*!
- *
- *  \brief Calculate max possible scale factor for input vector
- *
- *  \return Maximum scale factor
- *
- *  This function can constitute a significant amount of computational complexity - very much depending on the
- *  bitrate. Since it is a rather small function, effective assembler optimization might be possible.
- *
- */
-inline INT getScalefactor(const FIXP_DBL *vector, /*!< Pointer to input vector */
-                          INT len)                /*!< Length of input vector */
+#if defined(FUNCTION_FDK_get)
+
+
+INT  FDK_get (HANDLE_FDK_BITBUF hBitBuf, const UINT numberOfBits)
 {
-  INT i;
-  FIXP_DBL maxVal = FL2FX_DBL(0.0f);
+  UINT byteOffset = hBitBuf->BitNdx >> 3 ;
+  UINT bitOffset  = hBitBuf->BitNdx & 0x07 ;
+  UINT byteMask = hBitBuf->bufSize - 1 ;
 
-  for(i=len;i!=0;i--){
-    maxVal |= __builtin_mips_absq_s_w(*vector++);
+  hBitBuf->BitNdx     = (hBitBuf->BitNdx + numberOfBits) & (hBitBuf->bufBits - 1) ;
+  UINT tx = byteOffset & byteMask;
+  UCHAR *tmp_Buff = &hBitBuf->Buffer[tx];
+  hBitBuf->BitCnt    +=  numberOfBits ;
+  hBitBuf->ValidBits -=  numberOfBits ;
+
+
+  __asm__ volatile (
+      "ulw        %[tx],   0(%[tmp_Buff])           \n\t"
+      "wsbh       %[tx],   %[tx]                    \n\t"
+      "BALIGN     %[tx],   %[tx],          2        \n\t"
+
+      : [tx] "=&r" (tx)
+      : [tmp_Buff] "r" (tmp_Buff)
+      : "memory"
+  );
+
+  if (bitOffset)
+  {
+    tx <<= bitOffset;
+    tx |= hBitBuf->Buffer [(byteOffset+4) & byteMask] >> (8-bitOffset);
   }
 
-  return fixMax((INT)0,(CntLeadingZeros(maxVal) - 1));
+  return (tx >> (32 - numberOfBits)) ;
 }
-#endif
-
-#endif /*__mips_dsp */
+#endif /* #if defined(FUNCTION_FDK_get) */

@@ -102,6 +102,10 @@ amm-info@iis.fraunhofer.de
 
 #include "FDK_trigFcts.h"
 
+#if defined(__mips__)
+#include "mips/psdec_mips.cpp"
+#endif
+
 
 /********************************************************************/
 /*                       MLQUAL DEFINES                             */
@@ -318,6 +322,7 @@ void ResetPsDeCor( HANDLE_PS_DEC h_ps_d )  /*!< pointer to the module state */
 
 }
 
+#if !defined (FUNCTION_deCorrelateSlotBased)
 /*******************************************************************************/
 
 /* slot based funcion prototypes */
@@ -337,7 +342,9 @@ static void deCorrelateSlotBased( HANDLE_PS_DEC h_ps_d,
 
                                   FIXP_DBL    *rIntBufferRight,
                                   FIXP_DBL    *iIntBufferRight );
+#endif
 
+#if !defined (FUNCTION_applySlotBasedRotation)
 static void applySlotBasedRotation( HANDLE_PS_DEC h_ps_d,
 
                                     FIXP_DBL  *mHybridRealLeft,
@@ -352,7 +359,7 @@ static void applySlotBasedRotation( HANDLE_PS_DEC h_ps_d,
                                     FIXP_DBL  *QmfRightReal,
                                     FIXP_DBL  *QmfRightImag
                                   );
-
+#endif
 
 /***************************************************************************/
 /*!
@@ -565,6 +572,7 @@ void rescalFilterBankValues( HANDLE_PS_DEC   h_ps_d,                      /* par
   }
 }
 
+#if !defined (FUNCTION_deCorrelateSlotBased)
 /***************************************************************************/
 /*!
   \brief  Generate decorrelated side channel using allpass/delay
@@ -929,7 +937,7 @@ deCorrelateSlotBased( HANDLE_PS_DEC h_ps_d,            /*!< pointer to the modul
   C_ALLOC_SCRATCH_END(aaTransRatioSlot, FIXP_DBL, NO_MID_RES_BINS);
   C_ALLOC_SCRATCH_END(aaPowerSlot, FIXP_DBL, NO_MID_RES_BINS);
 }
-
+#endif /* #if !defined (FUNCTION_deCorrelateSlotBased) */
 
 void initSlotBasedRotation( HANDLE_PS_DEC h_ps_d, /*!< pointer to the module state */
                             int env,
@@ -1062,7 +1070,7 @@ void initSlotBasedRotation( HANDLE_PS_DEC h_ps_d, /*!< pointer to the module sta
   } /* group loop */
 }
 
-
+#if !defined (FUNCTION_applySlotBasedRotation)
 static void applySlotBasedRotation( HANDLE_PS_DEC h_ps_d,        /*!< pointer to the module state */
 
                                     FIXP_DBL  *mHybridRealLeft,  /*!< hybrid values real left  */
@@ -1207,7 +1215,7 @@ static void applySlotBasedRotation( HANDLE_PS_DEC h_ps_d,        /*!< pointer to
     } /* subband */
   }
 }
-
+#endif /* #if !defined (FUNCTION_applySlotBasedRotation) */
 
 /***************************************************************************/
 /*!

@@ -106,6 +106,10 @@ amm-info@iis.fraunhofer.de
 
 #if defined(__arm__)
 #include "arm/dct_arm.cpp"
+
+#elif defined(__mips__)
+#include "mips/dct_mips.cpp"
+
 #endif
 
 

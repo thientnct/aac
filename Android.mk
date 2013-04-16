@@ -53,6 +53,32 @@ LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/libSBRdec/include \
         $(LOCAL_PATH)/libSBRenc/include
 
+ifeq ($(TARGET_ARCH),mips)
+    ifneq ($(ARCH_HAS_BIGENDIAN),true)
+       ifeq ($(ARCH_MIPS_DSP_REV),2)
+            LOCAL_CFLAGS += -DMIPS_DSP_R2_LE
+            LOCAL_CFLAGS += -DMIPS_DSP_R1_LE
+            LOCAL_CFLAGS += -DMIPS32_R2_LE
+            LOCAL_CFLAGS += -DMIPS32_LE
+        else ifeq ($(ARCH_MIPS_DSP_REV),1)
+            LOCAL_CFLAGS += -DMIPS_DSP_R1_LE
+            LOCAL_CFLAGS += -DMIPS32_R2_LE
+            LOCAL_CFLAGS += -DMIPS32_LE
+        else ifeq ($(TARGET_ARCH_VARIANT),mips32-fp)
+            LOCAL_CFLAGS += -DMIPS32_LE
+        else ifeq ($(TARGET_ARCH_VARIANT),mips32)
+            LOCAL_CFLAGS += -DMIPS32_LE
+        else
+            LOCAL_CFLAGS += -DMIPS32_R2_LE
+            LOCAL_CFLAGS += -DMIPS32_LE
+        endif
+
+        ifeq ($(ARCH_MIPS_HAS_FPU),true)
+            LOCAL_CFLAGS += -DMIPS_FPU_LE
+        endif
+    endif
+endif
+
 LOCAL_MODULE:= libFraunhoferAAC
 
 include $(BUILD_STATIC_LIBRARY)

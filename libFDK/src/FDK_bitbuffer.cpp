@@ -112,6 +112,10 @@ const UINT BitMask [32+1] =
 
 const UINT *const RESTRICT pBitMask = BitMask;
 
+#if defined(__mips__)
+#include "mips/FDK_bitbuffer_mips.cpp"
+#endif
+
 void FDK_CreateBitBuffer (HANDLE_FDK_BITBUF *hBitBuf, UCHAR *pBuffer,
                           UINT bufSize)
 {
@@ -155,6 +159,7 @@ void FDK_ResetBitBuffer ( HANDLE_FDK_BITBUF hBitBuf )
    hBitBuf->BitNdx      = 0 ;
 }
 
+#ifndef FUNCTION_FDK_get
 INT  FDK_get (HANDLE_FDK_BITBUF hBitBuf, const UINT numberOfBits)
 {
   UINT byteOffset = hBitBuf->BitNdx >> 3 ;
@@ -179,6 +184,7 @@ INT  FDK_get (HANDLE_FDK_BITBUF hBitBuf, const UINT numberOfBits)
 
   return (tx >> (32 - numberOfBits)) ;
 }
+#endif /* #ifndef FUNCTION_FDK_get */
 
 INT FDK_get32 (HANDLE_FDK_BITBUF hBitBuf)
 {
@@ -392,6 +398,9 @@ void FDK_Feed(HANDLE_FDK_BITBUF hBitBuf,
   }
 
   *bytesValid -= bTotal ;
+#if defined(FUNCTION_FDK_get)
+  *(int*)&hBitBuf->Buffer[8192] = *(int*)&hBitBuf->Buffer[0];//copy first four bytes for function FDK_get
+#endif /* #if defined(FUNCTION_FDK_get) */
 }
 
 void CopyAlignedBlock (HANDLE_FDK_BITBUF h_BitBufSrc, UCHAR *RESTRICT dstBuffer, UINT bToRead)

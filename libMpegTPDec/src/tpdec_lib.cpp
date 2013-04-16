@@ -150,9 +150,11 @@ struct TRANSPORTDEC
 #define TPDEC_CONFIG_FOUND         32
 
 C_ALLOC_MEM(Ram_TransportDecoder, TRANSPORTDEC, 1)
+#if defined(FUNCTION_FDK_get)
+C_ALLOC_MEM(Ram_TransportDecoderBuffer, UCHAR, TRANSPORTDEC_INBUF_SIZE+4) /* allocate 4 bytes for function FDK_get */
+#else /* #if defined(FUNCTION_FDK_get) */
 C_ALLOC_MEM(Ram_TransportDecoderBuffer, UCHAR, TRANSPORTDEC_INBUF_SIZE)
-
-
+#endif /* #if defined(FUNCTION_FDK_get) */
 
 
 HANDLE_TRANSPORTDEC transportDec_Open( const TRANSPORT_TYPE transportFmt, const UINT flags)

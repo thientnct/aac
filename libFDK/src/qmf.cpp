@@ -136,6 +136,9 @@ amm-info@iis.fraunhofer.de
 #if defined(__arm__)
 #include "arm/qmf_arm.cpp"
 
+#elif defined(__mips__)
+#include "mips/qmf_mips.cpp"
+
 #endif
 
 /*!

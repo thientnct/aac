@@ -140,6 +140,10 @@ amm-info@iis.fraunhofer.de
 
 #include "FDK_tools_rom.h"
 
+#if defined(__mips__)
+#include "mips/conceal_mips.cpp"
+#endif
+
 #define CONCEAL_DFLT_COMF_NOISE_LEVEL     ( 46 )  /* ~= -70 dB */
 
 
@@ -639,7 +643,7 @@ static void CConcealment_fakePnsData (
   }
 }
 
-
+#if !defined (FUNCTION_CConcealment_Store)
 /*!
   \brief Store data for concealment techniques applied later
 
@@ -716,6 +720,7 @@ void
   }
   
 }
+#endif /* #if !defined (FUNCTION_CConcealment_Store) */
 
 
 /*!

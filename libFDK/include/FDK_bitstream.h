@@ -385,8 +385,16 @@ FDK_INLINE UCHAR FDKwriteBitsBwd(HANDLE_FDK_BITSTREAM hBitStream, UINT value,
  */
 FDK_INLINE void FDKsyncCache (HANDLE_FDK_BITSTREAM hBitStream)
 {
-  if (hBitStream->ConfigCache == BS_READER)
+  if (hBitStream->ConfigCache == BS_READER){
+#if defined(MIPS32_LE)
+    hBitStream->hBitBuf.BitCnt    -= hBitStream->BitsInCache ;
+    hBitStream->hBitBuf.ValidBits += hBitStream->BitsInCache ;
+    hBitStream->hBitBuf.BitNdx     = (hBitStream->hBitBuf.BitNdx - hBitStream->BitsInCache) & (hBitStream->hBitBuf.bufBits - 1) ;
+#else
     FDK_pushBack (&hBitStream->hBitBuf,hBitStream->BitsInCache,hBitStream->ConfigCache) ;
+#endif /* MIPS32_LE */
+  }
+
   else                        /* BS_WRITER */
     FDK_put(&hBitStream->hBitBuf, hBitStream->CacheWord, hBitStream->BitsInCache) ;
 
@@ -486,7 +494,13 @@ FDK_INLINE void FDKpushBack (HANDLE_FDK_BITSTREAM hBitStream, const UINT numberO
   }
   else {
     FDKsyncCache(hBitStream) ;
+#if defined(MIPS32_LE)
+    hBitStream->hBitBuf.BitCnt    -= numberOfBits ;
+    hBitStream->hBitBuf.ValidBits += (hBitStream->ConfigCache==0) ? numberOfBits : (-(INT)hBitStream->BitsInCache) ;
+    hBitStream->hBitBuf.BitNdx     = (hBitStream->hBitBuf.BitNdx - numberOfBits) & (hBitStream->hBitBuf.bufBits - 1) ;
+#else
     FDK_pushBack(&hBitStream->hBitBuf,numberOfBits,hBitStream->ConfigCache);
+#endif /* MIPS32_LE */
   }
 }
 
