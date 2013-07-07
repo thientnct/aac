@@ -40,7 +40,6 @@ LOCAL_SRC_FILES := \
         $(sbrenc_sources:%=libSBRenc/src/%)
 
 LOCAL_CFLAGS := -DANDROID
-LOCAL_CFLAGS += -Wno-sequence-point -Wno-extra
 
 LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/libAACdec/include \
