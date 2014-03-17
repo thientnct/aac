@@ -16,6 +16,24 @@
       "revId": "8609bfea36ebcd6e307408dd557101a8e2fa89d4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dcdfd954_8e9a7b5b",
+        "filename": "libFDK/include/FDK_archdef.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 1004395
+      },
+      "writtenOn": "2014-03-17T16:10:38Z",
+      "side": 1,
+      "message": "I\u0027m not sure.  I was just trying to get it to compile, not to actually work.  Jean-Michel - can you please check with Fraunhofer on this?",
+      "parentUuid": "3c1ab5b4_da58f5e9",
+      "revId": "8609bfea36ebcd6e307408dd557101a8e2fa89d4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
