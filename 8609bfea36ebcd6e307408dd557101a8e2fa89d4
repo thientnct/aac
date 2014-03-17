@@ -34,6 +34,23 @@
       "revId": "8609bfea36ebcd6e307408dd557101a8e2fa89d4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7cba6def_be3101ce",
+        "filename": "libFDK/include/FDK_archdef.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 1014443
+      },
+      "writtenOn": "2014-03-17T17:51:08Z",
+      "side": 1,
+      "message": "Perhaps you could set the same parameters as armv7 for __aarch64__ *in addition to the warning* ? At first glance, they seem sensible. Up to you though, not much point if they\u0027re going to be updated and/or not going to be run.",
+      "revId": "8609bfea36ebcd6e307408dd557101a8e2fa89d4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
