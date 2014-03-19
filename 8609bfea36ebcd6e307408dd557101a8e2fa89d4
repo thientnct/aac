@@ -1,0 +1,9 @@
+Verified+1: Deckard Autoverifier <deckard@android.com>
+Code-Review+2: Glenn Kasten <gkasten@android.com>
+Verified+1: Glenn Kasten <gkasten@android.com>
+Code-Review+2: Narayan Kamath <narayan@google.com>
+Submitted-by: Glenn Kasten <gkasten@android.com>
+Submitted-at: Wed, 19 Mar 2014 20:58:18 +0000
+Reviewed-on: https://android-review.googlesource.com/87792
+Project: platform/external/aac
+Branch: refs/heads/master
