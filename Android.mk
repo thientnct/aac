@@ -56,3 +56,22 @@ LOCAL_C_INCLUDES := \
 LOCAL_MODULE:= libFraunhoferAAC
 
 include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+	test/libaacenc_test.c
+
+LOCAL_C_INCLUDES += \
+	external/aac/libAACenc/include \
+	external/aac/libSYS/include
+
+LOCAL_STATIC_LIBRARIES := libc libFraunhoferAAC
+
+LOCAL_MODULE := libaacenc_test
+
+LOCAL_MODULE_TAGS := optional
+
+LOCAL_FORCE_STATIC_EXECUTABLE := true
+
+include $(BUILD_EXECUTABLE)
