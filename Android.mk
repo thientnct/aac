@@ -41,6 +41,9 @@ LOCAL_SRC_FILES := \
 
 LOCAL_CFLAGS := -DANDROID
 LOCAL_CFLAGS += -Wno-sequence-point -Wno-extra
+# Clang in C++11 mode doesn't like assigning values > 0x7fffffff
+# to signed integers -- done heavily in the huffman tables here etc.
+LOCAL_CLANG_CFLAGS += -Wno-error=c++11-narrowing
 
 LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/libAACdec/include \
