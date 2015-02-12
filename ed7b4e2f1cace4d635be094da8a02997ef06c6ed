@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f695b1bd_7baddfaf",
+        "filename": "libSYS/src/genericStds.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2015-02-12T19:10:51Z",
+      "side": 1,
+      "message": "always use __ANDROID__ instead of the deprecated ANDROID.",
+      "revId": "ed7b4e2f1cace4d635be094da8a02997ef06c6ed",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
