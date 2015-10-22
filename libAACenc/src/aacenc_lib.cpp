@@ -100,8 +100,8 @@ amm-info@iis.fraunhofer.de
 #define AACENCODER_LIB_VL1 4
 #define AACENCODER_LIB_VL2 12
 #define AACENCODER_LIB_TITLE "AAC Encoder"
-#define AACENCODER_LIB_BUILD_DATE __DATE__
-#define AACENCODER_LIB_BUILD_TIME __TIME__
+#define AACENCODER_LIB_BUILD_DATE ""
+#define AACENCODER_LIB_BUILD_TIME ""
 
 
 #include "sbr_encoder.h"

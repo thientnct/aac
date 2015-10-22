@@ -619,8 +619,8 @@ TRANSPORTENC_ERROR transportEnc_GetLibInfo( LIB_INFO *info )
   info->module_id = FDK_TPENC;
   info->version = LIB_VERSION(TP_LIB_VL0, TP_LIB_VL1, TP_LIB_VL2);
   LIB_VERSION_STRING(info);
-  info->build_date = __DATE__;
-  info->build_time = __TIME__;
+  info->build_date = "";
+  info->build_time = "";
   info->title = TP_LIB_TITLE;
 
   /* Set flags */

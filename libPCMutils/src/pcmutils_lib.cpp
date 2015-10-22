@@ -150,8 +150,8 @@ amm-info@iis.fraunhofer.de
 #define PCMDMX_LIB_VL1 4
 #define PCMDMX_LIB_VL2 2
 #define PCMDMX_LIB_TITLE "PCM Downmix Lib"
-#define PCMDMX_LIB_BUILD_DATE __DATE__
-#define PCMDMX_LIB_BUILD_TIME __TIME__
+#define PCMDMX_LIB_BUILD_DATE ""
+#define PCMDMX_LIB_BUILD_TIME ""
 
 
 /* Fixed and unique channel group indices.
