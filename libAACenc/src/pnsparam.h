@@ -96,7 +96,7 @@ amm-info@iis.fraunhofer.de
 #include "psy_const.h"
 
 #define NUM_PNSINFOTAB    4
-#define PNS_TABLE_ERROR   -1
+#define PNS_TABLE_ERROR   (-1)
 
 /* detection algorithm flags */
 #define USE_POWER_DISTRIBUTION           (1<<0)

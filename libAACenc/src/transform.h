@@ -95,7 +95,7 @@ amm-info@iis.fraunhofer.de
 
 #define WTS0 1
 #define WTS1 0
-#define WTS2 -2
+#define WTS2 (-2)
 
 /**
  * \brief: Performe MDCT transform of time domain data.

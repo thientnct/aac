@@ -328,29 +328,29 @@ static inline void fft15(FIXP_DBL *pInput)
     FIXP_DBL wa, wb;\
     wa = fMultDiv2(a, W_PiFOURTH);\
     wb = fMultDiv2(b, W_PiFOURTH);\
-    diff = wb - wa;\
-    sum  = wb + wa;\
+    (diff) = wb - wa;\
+    (sum)  = wb + wa;\
   }
 #endif
 
 /* This version is more overflow save, but less cycle optimal. */
 #define SUMDIFF_EIGTH(x, y, ix, iy, vr, vi, ur, ui) \
-  vr = (x[ 0 + ix]>>1) + (x[16 + ix]>>1);  /* Re A + Re B */ \
-  vi = (x[ 8 + ix]>>1) + (x[24 + ix]>>1);     /* Re C + Re D */ \
-  ur = (x[ 1 + ix]>>1) + (x[17 + ix]>>1);  /* Im A + Im B */ \
-  ui = (x[ 9 + ix]>>1) + (x[25 + ix]>>1);     /* Im C + Im D */ \
-  y[ 0 + iy] = vr + vi;     /* Re A' = ReA + ReB +ReC + ReD */    \
-  y[ 4 + iy] = vr - vi;     /* Re C' = -(ReC+ReD) + (ReA+ReB) */  \
-  y[ 1 + iy] = ur + ui;     /* Im A' = sum of imag values */      \
-  y[ 5 + iy] = ur - ui;     /* Im C' = -Im C -Im D +Im A +Im B */ \
-  vr -= x[16 + ix];              /* Re A - Re B */ \
-  vi = vi - x[24 + ix];          /* Re C - Re D */ \
-  ur -= x[17 + ix];              /* Im A - Im B */ \
-  ui = ui - x[25 + ix];          /* Im C - Im D */ \
-  y[ 2 + iy] = ui + vr;          /* Re B' = Im C - Im D  + Re A - Re B */ \
-  y[ 6 + iy] = vr - ui;          /* Re D' = -Im C + Im D + Re A - Re B */ \
-  y[ 3 + iy] = ur - vi;          /* Im B'= -Re C + Re D + Im A - Im B */  \
-  y[ 7 + iy] = vi + ur;          /* Im D'= Re C - Re D + Im A - Im B */
+  vr = ((x)[ 0 + (ix)]>>1) + ((x)[16 + (ix)]>>1);  /* Re A + Re B */ \
+  (vi) = ((x)[ 8 + (ix)]>>1) + ((x)[24 + (ix)]>>1);     /* Re C + Re D */ \
+  (ur) = ((x)[ 1 + (ix)]>>1) + ((x)[17 + (ix)]>>1);  /* Im A + Im B */ \
+  (ui) = ((x)[ 9 + (ix)]>>1) + ((x)[25 + (ix)]>>1);     /* Im C + Im D */ \
+  (y)[ 0 + (iy)] = (vr) + (vi);     /* Re A' = ReA + ReB +ReC + ReD */    \
+  (y)[ 4 + (iy)] = (vr) - (vi);     /* Re C' = -(ReC+ReD) + (ReA+ReB) */  \
+  (y)[ 1 + (iy)] = (ur) + (ui);     /* Im A' = sum of imag values */      \
+  (y)[ 5 + (iy)] = (ur) - (ui);     /* Im C' = -Im C -Im D +Im A +Im B */ \
+  (vr) -= (x)[16 + (ix)];              /* Re A - Re B */ \
+  (vi) = (vi) - (x)[24 + (ix)];          /* Re C - Re D */ \
+  (ur) -= (x)[17 + (ix)];              /* Im A - Im B */ \
+  (ui) = (ui) - (x)[25 + (ix)];          /* Im C - Im D */ \
+  (y)[ 2 + (iy)] = (ui) + (vr);          /* Re B' = Im C - Im D  + Re A - Re B */ \
+  (y)[ 6 + (iy)] = (vr) - (ui);          /* Re D' = -Im C + Im D + Re A - Re B */ \
+  (y)[ 3 + (iy)] = (ur) - (vi);          /* Im B'= -Re C + Re D + Im A - Im B */  \
+  (y)[ 7 + (iy)] = (vi) + (ur);          /* Im D'= Re C - Re D + Im A - Im B */
 
 static const FIXP_STP fft16_w16[2] =  { STCP(0x7641af3d, 0x30fbc54d), STCP(0x30fbc54d, 0x7641af3d) };
 
@@ -1087,10 +1087,10 @@ static inline void fft_apply_rot_vector(FIXP_DBL *RESTRICT pData, const int cl, 
 { \
   int       i, j; \
  \
-  C_ALLOC_SCRATCH_START(aDst, FIXP_DBL, length*2); \
-  C_ALLOC_SCRATCH_START(aDst2, FIXP_DBL, dim2*2); \
+  C_ALLOC_SCRATCH_START(aDst, FIXP_DBL, (length)*2); \
+  C_ALLOC_SCRATCH_START(aDst2, FIXP_DBL, (dim2)*2); \
  \
-  FDK_ASSERT(length == dim1*dim2); \
+  FDK_ASSERT((length) == (dim1)*(dim2)); \
  \
   /* Perform dim2 times the fft of length dim1. The input samples are at the address of pSrc and the \
   output samples are at the address of pDst. The input vector for the fft of length dim1 is built \
@@ -1100,17 +1100,17 @@ static inline void fft_apply_rot_vector(FIXP_DBL *RESTRICT pData, const int cl, 
     const FIXP_DBL* pSrc = pInput; \
     FIXP_DBL  *RESTRICT pDst = aDst; \
     \
-    for(i=0; i<dim2; i++) \
+    for(i=0; i<(dim2); i++) \
     { \
-      for(j=0; j<dim1; j++) \
+      for(j=0; j<(dim1); j++) \
       { \
-        pDst[2*j]   = pSrc[2*j*dim2]; \
-        pDst[2*j+1] = pSrc[2*j*dim2+1]; \
+        pDst[2*j]   = pSrc[2*j*(dim2)]; \
+        pDst[2*j+1] = pSrc[2*j*(dim2)+1]; \
       } \
       \
       fft_func1(pDst); \
       pSrc += 2; \
-      pDst = pDst + 2*dim1; \
+      pDst = pDst + 2*(dim1); \
     } \
   } \
   \
@@ -1127,28 +1127,28 @@ static inline void fft_apply_rot_vector(FIXP_DBL *RESTRICT pData, const int cl, 
     FIXP_DBL *RESTRICT pDst    = aDst2; \
     FIXP_DBL *RESTRICT pDstOut = pInput; \
     \
-    for(i=0; i<dim1; i++) \
+    for(i=0; i<(dim1); i++) \
     { \
-      for(j=0; j<dim2; j++) \
+      for(j=0; j<(dim2); j++) \
       { \
-        pDst[2*j]   = pSrc[2*j*dim1]; \
-        pDst[2*j+1] = pSrc[2*j*dim1+1]; \
+        pDst[2*j]   = pSrc[2*j*(dim1)]; \
+        pDst[2*j+1] = pSrc[2*j*(dim1)+1]; \
       } \
       \
       fft_func2(pDst); \
       \
-      for(j=0; j<dim2; j++) \
+      for(j=0; j<(dim2); j++) \
       { \
-        pDstOut[2*j*dim1]   = pDst[2*j]; \
-        pDstOut[2*j*dim1+1] = pDst[2*j+1]; \
+        pDstOut[2*j*(dim1)]   = pDst[2*j]; \
+        pDstOut[2*j*(dim1)+1] = pDst[2*j+1]; \
       } \
       pSrc += 2; \
       pDstOut += 2; \
     } \
   } \
   \
-  C_ALLOC_SCRATCH_END(aDst2, FIXP_DBL, dim2*2); \
-  C_ALLOC_SCRATCH_END(aDst, FIXP_DBL, length*2); \
+  C_ALLOC_SCRATCH_END(aDst2, FIXP_DBL, (dim2)*2); \
+  C_ALLOC_SCRATCH_END(aDst, FIXP_DBL, (length)*2); \
 } \
 
 #else /* FFT_TWO_STAGE_MACRO_ENABLE */

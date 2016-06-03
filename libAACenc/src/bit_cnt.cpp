@@ -92,8 +92,8 @@ amm-info@iis.fraunhofer.de
 
 #include "aacEnc_ram.h"
 
-#define HI_LTAB(a) (a>>16)
-#define LO_LTAB(a) (a & 0xffff)
+#define HI_LTAB(a) ((a)>>16)
+#define LO_LTAB(a) ((a) & 0xffff)
 
 /*****************************************************************************
 

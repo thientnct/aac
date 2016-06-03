@@ -107,7 +107,7 @@ amm-info@iis.fraunhofer.de
 /*                       MLQUAL DEFINES                             */
 /********************************************************************/
 
-  #define FRACT_ZERO FRACT_BITS-1
+  #define FRACT_ZERO (FRACT_BITS-1)
 /********************************************************************/
 
 SBR_ERROR ResetPsDec( HANDLE_PS_DEC h_ps_d );

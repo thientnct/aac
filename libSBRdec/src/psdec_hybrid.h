@@ -96,11 +96,11 @@ amm-info@iis.fraunhofer.de
 #define FAST_FILTER8
 #define FAST_FILTER12
 
-#define FFT_IDX_R(a)  (2*a)
-#define FFT_IDX_I(a)  (2*a+1)
+#define FFT_IDX_R(a)  (2*(a))
+#define FFT_IDX_I(a)  (2*(a)+1)
 
-#define FIXP_FFT_IDX_R(a)   (a<<1)
-#define FIXP_FFT_IDX_I(a)  ((a<<1) + 1)
+#define FIXP_FFT_IDX_R(a)   ((a)<<1)
+#define FIXP_FFT_IDX_I(a)  (((a)<<1) + 1)
 
 
 typedef enum {

@@ -1494,7 +1494,7 @@ const FIXP_QTW qmf_phaseshift_sin_downsamp32[] =
  */
 
 #if defined(QMF_COEFF_16BIT)
-#define QTCFLLD(x)  FL2FXCONST_SGL(x/(float)(1<<QMF_CLDFB_PFT_SCALE))
+#define QTCFLLD(x)  FL2FXCONST_SGL((x)/(float)(1<<QMF_CLDFB_PFT_SCALE))
 #define QTCFLLDT(x)  FL2FXCONST_SGL(x)
 #else
 #define QTCFLLD(x)  FL2FXCONST_DBL(x/(float)(1<<QMF_CLDFB_PFT_SCALE))

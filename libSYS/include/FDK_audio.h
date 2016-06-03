@@ -546,9 +546,9 @@ typedef enum {
  * \param lev1  2nd level of version number.
  * \param lev2  3rd level of version number.
   */
-#define LIB_VERSION(lev0, lev1, lev2) ((lev0<<24 & 0xff000000) | \
-                                       (lev1<<16 & 0x00ff0000) | \
-                                       (lev2<<8  & 0x0000ff00))
+#define LIB_VERSION(lev0, lev1, lev2) (((lev0)<<24 & 0xff000000) | \
+                                       ((lev1)<<16 & 0x00ff0000) | \
+                                       ((lev2)<<8  & 0x0000ff00))
 
 /**
  *  Build text string of version.

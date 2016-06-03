@@ -119,7 +119,7 @@ amm-info@iis.fraunhofer.de
            (core2sbr delay     )          ds     (read, core and ds area)
 */
 
-#define SFB(dwnsmp)        (32 << (dwnsmp-1))     /* SBR Frequency bands: 64 for dual-rate, 32 for single-rate */
+#define SFB(dwnsmp)        (32 << ((dwnsmp)-1))     /* SBR Frequency bands: 64 for dual-rate, 32 for single-rate */
 #define STS(fl)            (((fl)==1024)?32:30)   /* SBR Time Slots: 32 for core frame length 1024, 30 for core frame length 960 */
 
 #define DELAY_QMF_ANA(dwnsmp) ((320<<((dwnsmp)-1)) - (32<<((dwnsmp)-1))) /* Full bandwidth */
@@ -148,7 +148,7 @@ amm-info@iis.fraunhofer.de
 
 
 
-#define INVALID_TABLE_IDX -1
+#define INVALID_TABLE_IDX (-1)
 
 /***************************************************************************/
 /*!
