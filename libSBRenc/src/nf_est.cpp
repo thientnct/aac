@@ -95,11 +95,11 @@ static const FIXP_DBL smoothFilter[4]  = { 0x077f813d, 0x19999995, 0x2bb3b1f5, 0
 static const FIXP_DBL QuantOffset = (INT)0xfc000000;  /* ld64(0.25) */
 
 #ifndef min
-#define min(a,b) ( a < b ? a:b)
+#define min(a,b) ( (a) < (b) ? (a):(b))
 #endif
 
 #ifndef max
-#define max(a,b) ( a > b ? a:b)
+#define max(a,b) ( (a) > (b) ? (a):(b))
 #endif
 
 #define NOISE_FLOOR_OFFSET_SCALING  (4)

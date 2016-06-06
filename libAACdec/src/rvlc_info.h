@@ -95,7 +95,7 @@ amm-info@iis.fraunhofer.de
 #define BWD                           1     /* bitstream decoding direction backward (RVL coded part) */
 
 #define MAX_RVL                       7     /* positive RVLC escape */
-#define MIN_RVL                      -7     /* negative RVLC escape */
+#define MIN_RVL                     (-7)    /* negative RVLC escape */
 #define MAX_ALLOWED_DPCM_INDEX       14     /* the maximum allowed index of a decoded dpcm value (offset 'TABLE_OFFSET' incl --> must be subtracted) */
 #define TABLE_OFFSET                  7     /* dpcm offset of valid output values of rvl table decoding, the rvl table ouly returns positive values, therefore the offset */
 #define MAX_LEN_RVLC_CODE_WORD        9     /* max length of a RVL codeword in bits */
@@ -105,7 +105,7 @@ amm-info@iis.fraunhofer.de
 #define SF_OFFSET                   100     /* offset for correcting scf value */
 
 #define CONCEAL_MAX_INIT           1311     /* arbitrary value */
-#define CONCEAL_MIN_INIT          -1311     /* arbitrary value */
+#define CONCEAL_MIN_INIT         (-1311)    /* arbitrary value */
 
 #define RVLC_MAX_SFB              ((8) * (16))
 

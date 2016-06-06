@@ -844,7 +844,7 @@ const UCHAR FDKaacEnc_specExpTableComb[4][14] =
 
 #define WTS0 1
 #define WTS1 0
-#define WTS2 -2
+#define WTS2 (-2)
 
 const FIXP_WTB ELDAnalysis512[1536] = {
   /* part 0 */

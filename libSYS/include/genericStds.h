@@ -148,66 +148,67 @@ typedef enum {
  *
  */
 
-#define H_ALLOC_MEM(name,type)          type * Get ## name(int n=0); void Free ## name(type** p); \
+// NOLINT: do not put parentheses around 'type'.
+#define H_ALLOC_MEM(name,type)          type * Get ## name(int n=0); void Free ## name(type** p);  /* NOLINT */ \
                                         UINT GetRequiredMem ## name(void);
 
 /** See #H_ALLOC_MEM for description. */
-#define H_ALLOC_MEM_OVERLAY(name,type)  type * Get ## name(int n=0); void Free ## name(type** p); \
+#define H_ALLOC_MEM_OVERLAY(name,type)  type * Get ## name(int n=0); void Free ## name(type** p); /* NOLINT */ \
                                         UINT GetRequiredMem ## name(void);
 
 
   /** See #H_ALLOC_MEM for description. */
   #define C_ALLOC_MEM(name,type,num) \
-    type * Get ## name(int n) { FDK_ASSERT((n) == 0); return ((type*)FDKcalloc(num, sizeof(type))); } \
-    void Free ## name(type** p) { if (p != NULL) { FDKfree(*p); *p=NULL; } } \
+    type * Get ## name(int n) { FDK_ASSERT((n) == 0); return ((type*)FDKcalloc(num, sizeof(type))); } /* NOLINT */ \
+    void Free ## name(type** p) { if (p != NULL) { FDKfree(*p); *p=NULL; } }  /* NOLINT */ \
     UINT GetRequiredMem ## name(void) { return ALGN_SIZE_EXTRES((num) * sizeof(type)); }
 
   /** See #H_ALLOC_MEM for description. */
   #define C_ALLOC_MEM_STATIC(name,type,num) \
-    static type * Get ## name(int n) { FDK_ASSERT((n) == 0); return ((type*)FDKcalloc(num, sizeof(type))); } \
-    static void Free ## name(type** p) { if (p != NULL) { FDKfree(*p); *p=NULL; } } \
+    static type * Get ## name(int n) { FDK_ASSERT((n) == 0); return ((type*)FDKcalloc(num, sizeof(type))); }  /* NOLINT */ \
+    static void Free ## name(type** p) { if (p != NULL) { FDKfree(*p); *p=NULL; } }  /* NOLINT */ \
     static UINT GetRequiredMem ## name(void) { return ALGN_SIZE_EXTRES((num) * sizeof(type)); }
 
   /** See #H_ALLOC_MEM for description. */
   #define C_ALLOC_MEM2(name,type,n1,n2) \
-    type * Get ## name (int n) { FDK_ASSERT((n) < (n2)); return ((type*)FDKcalloc(n1, sizeof(type))); } \
-    void Free ## name(type** p) { if (p != NULL) { FDKfree(*p); *p=NULL; } } \
+    type * Get ## name (int n) { FDK_ASSERT((n) < (n2)); return ((type*)FDKcalloc(n1, sizeof(type))); }  /* NOLINT */ \
+    void Free ## name(type** p) { if (p != NULL) { FDKfree(*p); *p=NULL; } } /* NOLINT */ \
     UINT GetRequiredMem ## name(void) { return ALGN_SIZE_EXTRES((n1) * sizeof(type)) * (n2); }
 
   /** See #H_ALLOC_MEM for description. */
   #define C_AALLOC_MEM(name,type,num) \
-    type * Get ## name(int n) { FDK_ASSERT((n) == 0); return ((type*)FDKaalloc((num)*sizeof(type), ALIGNMENT_DEFAULT)); } \
-    void Free ## name(type** p) { if (p != NULL) { FDKafree(*p); *p=NULL; } } \
+    type * Get ## name(int n) { FDK_ASSERT((n) == 0); return ((type*)FDKaalloc((num)*sizeof(type), ALIGNMENT_DEFAULT)); } /* NOLINT */ \
+    void Free ## name(type** p) { if (p != NULL) { FDKafree(*p); *p=NULL; } } /* NOLINT */ \
     UINT GetRequiredMem ## name(void) { return ALGN_SIZE_EXTRES((num) * sizeof(type) + ALIGNMENT_DEFAULT + sizeof(void *)); }
 
   /** See #H_ALLOC_MEM for description. */
   #define C_AALLOC_MEM2(name,type,n1,n2) \
-    type * Get ## name (int n) { FDK_ASSERT((n) < (n2)); return ((type*)FDKaalloc((n1)*sizeof(type), ALIGNMENT_DEFAULT)); } \
-    void Free ## name(type** p) { if (p != NULL) { FDKafree(*p); *p=NULL; } } \
+    type * Get ## name (int n) { FDK_ASSERT((n) < (n2)); return ((type*)FDKaalloc((n1)*sizeof(type), ALIGNMENT_DEFAULT)); } /* NOLINT */ \
+    void Free ## name(type** p) { if (p != NULL) { FDKafree(*p); *p=NULL; } } /* NOLINT */ \
     UINT GetRequiredMem ## name(void) { return ALGN_SIZE_EXTRES((n1) * sizeof(type) + ALIGNMENT_DEFAULT + sizeof(void *)) * (n2); }
 
   /** See #H_ALLOC_MEM for description. */
   #define C_ALLOC_MEM_L(name,type,num,s) \
-    type * Get ## name(int n) { FDK_ASSERT((n) == 0); return ((type*)FDKcalloc_L(num, sizeof(type), s)); } \
-    void Free ## name(type** p) { if (p != NULL) { FDKfree_L(*p); *p=NULL; } } \
+    type * Get ## name(int n) { FDK_ASSERT((n) == 0); return ((type*)FDKcalloc_L(num, sizeof(type), s)); }  /* NOLINT */ \
+    void Free ## name(type** p) { if (p != NULL) { FDKfree_L(*p); *p=NULL; } } /* NOLINT */ \
     UINT GetRequiredMem ## name(void) { return ALGN_SIZE_EXTRES((num) * sizeof(type)); }
 
   /** See #H_ALLOC_MEM for description. */
   #define C_ALLOC_MEM2_L(name,type,n1,n2,s) \
-    type * Get ## name (int n) { FDK_ASSERT((n) < (n2)); return (type*)FDKcalloc_L(n1, sizeof(type), s); } \
-    void Free ## name(type** p) { if (p != NULL) { FDKfree_L(*p); *p=NULL; } } \
+    type * Get ## name (int n) { FDK_ASSERT((n) < (n2)); return (type*)FDKcalloc_L(n1, sizeof(type), s); }  /* NOLINT */ \
+    void Free ## name(type** p) { if (p != NULL) { FDKfree_L(*p); *p=NULL; } } /* NOLINT */ \
     UINT GetRequiredMem ## name(void) { return ALGN_SIZE_EXTRES((n1) * sizeof(type)) * (n2); }
 
   /** See #H_ALLOC_MEM for description. */
   #define C_AALLOC_MEM_L(name,type,num,s) \
-    type * Get ## name(int n) { FDK_ASSERT((n) == 0); return ((type*)FDKaalloc_L((num)*sizeof(type), ALIGNMENT_DEFAULT, s)); } \
-    void Free ## name(type** p) { if (p != NULL) { FDKafree_L(*p); *p=NULL; } } \
+    type * Get ## name(int n) { FDK_ASSERT((n) == 0); return ((type*)FDKaalloc_L((num)*sizeof(type), ALIGNMENT_DEFAULT, s)); }  /* NOLINT */ \
+    void Free ## name(type** p) { if (p != NULL) { FDKafree_L(*p); *p=NULL; } } /* NOLINT */ \
     UINT GetRequiredMem ## name(void) { return ALGN_SIZE_EXTRES((num) * sizeof(type) + ALIGNMENT_DEFAULT + sizeof(void *)); }
 
   /** See #H_ALLOC_MEM for description. */
   #define C_AALLOC_MEM2_L(name,type,n1,n2,s) \
-    type * Get ## name (int n) { FDK_ASSERT((n) < (n2)); return ((type*)FDKaalloc_L((n1)*sizeof(type), ALIGNMENT_DEFAULT, s)); } \
-    void Free ## name(type** p) { if (p != NULL) { FDKafree_L(*p); *p=NULL; } } \
+    type * Get ## name (int n) { FDK_ASSERT((n) < (n2)); return ((type*)FDKaalloc_L((n1)*sizeof(type), ALIGNMENT_DEFAULT, s)); } /* NOLINT */ \
+    void Free ## name(type** p) { if (p != NULL) { FDKafree_L(*p); *p=NULL; } } /* NOLINT */ \
     UINT GetRequiredMem ## name(void) { return ALGN_SIZE_EXTRES((n1) * sizeof(type) + ALIGNMENT_DEFAULT + sizeof(void *)) * (n2); }
 
 /** See #H_ALLOC_MEM_OVERLAY for description. */
@@ -218,7 +219,7 @@ typedef enum {
 
    #define C_AALLOC_SCRATCH_START(name,type,n) \
      type _ ## name[(n)+(ALIGNMENT_DEFAULT+sizeof(type)-1)]; \
-     type * name = (type*)ALIGN_PTR(_ ## name); \
+     type * (name) = (type*)ALIGN_PTR(_ ## name); /* NOLINT */ \
 
    #define C_ALLOC_SCRATCH_START(name,type,n) \
      type name[n];

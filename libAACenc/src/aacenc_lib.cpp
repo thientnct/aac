@@ -120,9 +120,9 @@ amm-info@iis.fraunhofer.de
 
 #include "metadata_main.h"
 
-#define SBL(fl)            (fl/8)                 /*!< Short block length (hardcoded to 8 short blocks per long block) */
+#define SBL(fl)            ((fl)/8)               /*!< Short block length (hardcoded to 8 short blocks per long block) */
 #define BSLA(fl)           (4*SBL(fl)+SBL(fl)/2)  /*!< AAC block switching look-ahead */
-#define DELAY_AAC(fl)      (fl+BSLA(fl))          /*!< MDCT + blockswitching */
+#define DELAY_AAC(fl)      ((fl)+BSLA(fl))        /*!< MDCT + blockswitching */
 #define DELAY_AACELD(fl)   ((fl)/2)               /*!< ELD FB delay (no framing delay included) */
 
 #define INPUTBUFFER_SIZE (1537+100+2048)

@@ -94,8 +94,8 @@ amm-info@iis.fraunhofer.de
 #include "fft.h"
 
 /*--------------- defines -----------------------------*/
-#define FFT_IDX_R(a)  (2*a)
-#define FFT_IDX_I(a)  (2*a+1)
+#define FFT_IDX_R(a)  (2*(a))
+#define FFT_IDX_I(a)  (2*(a)+1)
 
 #define HYB_COEF8_0  ( 0.00746082949812f )
 #define HYB_COEF8_1  ( 0.02270420949825f )
