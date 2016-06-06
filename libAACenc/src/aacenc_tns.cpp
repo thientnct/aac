@@ -114,7 +114,7 @@ typedef struct{
 } TNS_INFO_TAB;
 
 #define TNS_TIMERES_SCALE    (1)
-#define FL2_TIMERES_FIX(a)   ( FL2FXCONST_DBL(a/(float)(1<<TNS_TIMERES_SCALE)) )
+#define FL2_TIMERES_FIX(a)   ( FL2FXCONST_DBL((a)/(float)(1<<TNS_TIMERES_SCALE)) )
 
 static const TNS_INFO_TAB tnsInfoTab[] =
 {

@@ -151,7 +151,7 @@ enum
 #define PCM_LEVEL             1.0f
 #define NORM_PCM              (PCM_LEVEL/32768.0f)
 #define NORM_PCM_ENERGY       (NORM_PCM*NORM_PCM)
-#define LOG_NORM_PCM          -15
+#define LOG_NORM_PCM          (-15)
 
 #define TNS_PREDGAIN_SCALE    (1000)
 

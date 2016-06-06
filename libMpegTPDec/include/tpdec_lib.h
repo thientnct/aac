@@ -128,9 +128,9 @@ typedef enum {
 
 
 /** Macro to identify decode errors. */
-#define TPDEC_IS_DECODE_ERROR(err) ( ((err>=tpdec_decode_error_start) && (err<=tpdec_decode_error_end)) ? 1 : 0)
+#define TPDEC_IS_DECODE_ERROR(err) ( (((err)>=tpdec_decode_error_start) && ((err)<=tpdec_decode_error_end)) ? 1 : 0)
 /** Macro to identify fatal errors. */
-#define TPDEC_IS_FATAL_ERROR(err)  ( ((err>=tpdec_fatal_error_start)  && (err<=tpdec_fatal_error_end))  ? 1 : 0)
+#define TPDEC_IS_FATAL_ERROR(err)  ( (((err)>=tpdec_fatal_error_start)  && ((err)<=tpdec_fatal_error_end))  ? 1 : 0)
 
 
 /**

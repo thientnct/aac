@@ -91,11 +91,11 @@ amm-info@iis.fraunhofer.de
 #define SCALE_FAC_NRG   256.0f
 
 #ifndef min
-#define min(a,b) ( a < b ? a:b)
+#define min(a,b) ( (a) < (b) ? (a):(b))
 #endif
 
 #ifndef max
-#define max(a,b) ( a > b ? a:b)
+#define max(a,b) ( (a) > (b) ? (a):(b))
 #endif
 
 static const FIXP_DBL quantStepsSbr[4]  =  { 0x00400000, 0x02800000, 0x03800000, 0x04c00000 } ;    /* table scaled with SCALE_FAC_QUO */

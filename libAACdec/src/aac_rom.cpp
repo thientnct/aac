@@ -94,7 +94,7 @@ amm-info@iis.fraunhofer.de
 /* Prescale InverseQuantTable by 4 to save
    redundant shifts in invers quantization
  */
-#define SCL_TAB(a) (a>>4)
+#define SCL_TAB(a) ((a)>>4)
 const FIXP_DBL InverseQuantTable [INV_QUANT_TABLESIZE + 1] =
 {
   SCL_TAB(0x32CBFD40), SCL_TAB(0x330FC340), SCL_TAB(0x33539FC0), SCL_TAB(0x33979280), SCL_TAB(0x33DB9BC0), SCL_TAB(0x341FBB80), SCL_TAB(0x3463F180), SCL_TAB(0x34A83DC0),

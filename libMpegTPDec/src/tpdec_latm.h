@@ -97,7 +97,7 @@ amm-info@iis.fraunhofer.de
 #include "FDK_bitstream.h"
 
 #define MIN_LATM_HEADERLENGTH  9
-#define MIN_LOAS_HEADERLENGTH  MIN_LATM_HEADERLENGTH + 24   /* both in bits */
+#define MIN_LOAS_HEADERLENGTH  (MIN_LATM_HEADERLENGTH + 24)   /* both in bits */
  #define MIN_TP_BUF_SIZE_LOAS   ( 8194 )
 
 enum {

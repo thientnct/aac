@@ -1181,7 +1181,7 @@ const FIXP_DBL Alphas[NO_ICC_LEVELS] = {
 
 #if defined(ARCH_PREFER_MULT_32x16)
 #define  FIXP_PS FIXP_SGL
-#define  FXP_CAST(a) FX_DBL2FX_SGL((FIXP_DBL)a)
+#define  FXP_CAST(a) FX_DBL2FX_SGL((FIXP_DBL)(a))
 #define  FL2FXCONST_PS FL2FXCONST_SGL
 #else
 #define  FIXP_PS FIXP_DBL

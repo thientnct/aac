@@ -101,7 +101,7 @@ amm-info@iis.fraunhofer.de
 #define A1 2
 #define A2 3
 
-#define BQC(x) FL2FXCONST_SGL(x/2)
+#define BQC(x) FL2FXCONST_SGL((x)/2)
 
 
 struct FILTER_PARAM {

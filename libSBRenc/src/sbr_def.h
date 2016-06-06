@@ -104,7 +104,7 @@ amm-info@iis.fraunhofer.de
 /* #define SBR_PAYLOAD_MONITOR */
 #undef SBR_PAYLOAD_MONITOR
 
-#define SWAP(a,b)                               tempr=a, a=b, b=tempr
+#define SWAP(a,b)                               tempr=(a), (a)=(b), (b)=tempr
 #define TRUE  1
 #define FALSE 0
 
