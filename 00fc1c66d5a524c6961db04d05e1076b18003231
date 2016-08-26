@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e5a9c2a7_0395328e",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1002682
+      },
+      "writtenOn": "2016-08-26T22:52:08Z",
+      "side": 0,
+      "message": "Don\u0027t think the cod is ready for this, it causes errors like:\n\nexternal/aac/libFDK/src/FDK_tools_rom.cpp:1304:3: error: constant expression evaluates to 4242265409 which cannot be narrowed to type \u0027FIXP_DBL\u0027 (aka \u0027int\u0027) [-Wc++11-narrowing]\n  QTC(0xfcdbd541), QTC(0xf6956fb7), QTC(0xf054d8d5), QTC(0xea1debbc), QTC(0xe3f47d96), QTC(0xdddc5b3b), QTC(0xd7d946d8), QTC(0xd1eef59e),\n  ^~~~~~~~~~~~~~~\nexternal/aac/libFDK/src/FDK_tools_rom.cpp:1265:17: note: expanded from macro \u0027QTC\u0027\n#define QTC(x)  (x)\n                ^~~\nexternal/aac/libFDK/src/FDK_tools_rom.cpp:1304:3: note: insert an explicit cast to silence this issue\n  QTC(0xfcdbd541), QTC(0xf6956fb7), QTC(0xf054d8d5), QTC(0xea1debbc), QTC(0xe3f47d96), QTC(0xdddc5b3b), QTC(0xd7d946d8), QTC(0xd1eef59e),\n  ^~~~~~~~~~~~~~~\n  static_cast\u003cFIXP_DBL\u003e( )\nexternal/aac/libFDK/src/FDK_tools_rom.cpp:1265:17: note: expanded from macro \u0027QTC\u0027\n#define QTC(x)  (x)\n                ^~~\n\nor \n\nexternal/aac/libSBRdec/src/sbr_rom.cpp:1196:31: error: constant expression evaluates to 3728304384 which cannot be narrowed to type \u0027FIXP_DBL\u0027 (aka \u0027int\u0027) [-Wc++11-narrowing]\nFXP_CAST(0x68b92180), FXP_CAST(0xde396900), FXP_CAST(0x80650380), FXP_CAST(0xcb537e40), FXP_CAST(0x5beb8f00), FXP_CAST(0x72f29200), FXP_CAST(0xf1f43c50), FXP_CAST(0x83896280),\n                              ^~~~~~~~~~~~\nexternal/aac/libSBRdec/src/sbr_rom.cpp:1196:31: note: insert an explicit cast to silence this issue\nFXP_CAST(0x68b92180), FXP_CAST(0xde396900), FXP_CAST(0x80650380), FXP_CAST(0xcb537e40), FXP_CAST(0x5beb8f00), FXP_CAST(0x72f29200), FXP_CAST(0xf1f43c50), FXP_CAST(0x83896280),\n                              ^~~~~~~~~~~~\n                              static_cast\u003cFIXP_DBL\u003e( )",
+      "revId": "00fc1c66d5a524c6961db04d05e1076b18003231",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
