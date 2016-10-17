@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3c45bf84_5e951518",
+        "filename": "libFDK/src/FDK_tools_rom.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 1263,
+      "author": {
+        "id": 1002068
+      },
+      "writtenOn": "2016-10-17T07:36:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1c963b08_03fa72cc",
+      "revId": "007402e03d9854703460c8122931b5ddb59354d2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1c963b08_c3032ae6",
         "filename": "libFDK/src/FDK_tools_rom.cpp",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2016-10-16T23:14:19Z",
       "side": 1,
       "message": "i\u0027d add the extra parens here too.",
+      "revId": "007402e03d9854703460c8122931b5ddb59354d2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc5a8f66_3a6f8171",
+        "filename": "libFDK/src/FDK_tools_rom.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 1265,
+      "author": {
+        "id": 1002068
+      },
+      "writtenOn": "2016-10-17T07:36:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1c963b08_c3032ae6",
       "revId": "007402e03d9854703460c8122931b5ddb59354d2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "9c7dca55_62953640",
+        "filename": "libFDK/src/fixpoint_math.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 390,
+      "author": {
+        "id": 1002068
+      },
+      "writtenOn": "2016-10-17T07:36:41Z",
+      "side": 1,
+      "message": "We could, but there\u0027s no strict need. The values above needed it because FIXP_DBL is a signed type, while the values are large unsigned constants (outside of the signed range, relying on twos complement notation). Since all values in this table are within the signed range, there\u0027s no need to litter it with more casts.",
+      "parentUuid": "1c963b08_83f522d9",
+      "revId": "007402e03d9854703460c8122931b5ddb59354d2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1c963b08_a3061ef7",
         "filename": "libSBRdec/src/sbr_rom.cpp",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2016-10-16T23:14:19Z",
       "side": 1,
       "message": "I\u0027d probably wrap with another set of parens, so that it can\u0027t possibly bind incorrectly.\n\n#define FXP_CAST(x)  ((FIXP_DBL)(x))",
+      "revId": "007402e03d9854703460c8122931b5ddb59354d2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bcbe0e35_265a5883",
+        "filename": "libSBRdec/src/sbr_rom.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 1188,
+      "author": {
+        "id": 1002068
+      },
+      "writtenOn": "2016-10-17T07:36:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1c963b08_a3061ef7",
       "revId": "007402e03d9854703460c8122931b5ddb59354d2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
