@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "bc352f64_825efa2a",
+        "filename": "libFDK/include/FDK_archdef.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1002068
+      },
+      "writtenOn": "2016-10-19T19:33:39Z",
+      "side": 1,
+      "message": "I guess so, although that\u0027s unrelated to this change.",
+      "parentUuid": "bcffef6a_c8de68c4",
+      "revId": "62db4bc2d9581451555f42907b9576f2235c7904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bcffef6a_08d990d9",
         "filename": "libFDK/include/FDK_archdef.h",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "bc352f64_226b6ecf",
+        "filename": "libFDK/include/FDK_archdef.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 1002068
+      },
+      "writtenOn": "2016-10-19T19:33:39Z",
+      "side": 1,
+      "message": "I guess checking __aarch64__ would be enough, yes.",
+      "parentUuid": "bcffef6a_08d990d9",
+      "revId": "62db4bc2d9581451555f42907b9576f2235c7904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bcffef6a_48a1d82f",
         "filename": "libFDK/include/clz.h",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2016-10-19T17:09:13Z",
       "side": 1,
       "message": "There are a couple places that we do this test -- and my reading is that they could be a simple __arch64__ and do not need the __AARCH64EL__. I didn\u0027t see anything that was endian-specific about any of the places protected this way.\n\nOnly reason I can think of for including the aarch64el specifier is if you\u0027re seeing compilers that define that but do not define the base __arch64__ \n\nthis applies to most of these files -- they use the compound test when I think they could test just __arch64__",
+      "revId": "62db4bc2d9581451555f42907b9576f2235c7904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dcf663e5_a3955acb",
+        "filename": "libFDK/include/clz.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1002068
+      },
+      "writtenOn": "2016-10-19T19:33:39Z",
+      "side": 1,
+      "message": "Yes, testing for __aarch64__ probably is enough.",
+      "parentUuid": "bcffef6a_48a1d82f",
       "revId": "62db4bc2d9581451555f42907b9576f2235c7904",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
