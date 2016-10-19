@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bcffef6a_c8de68c4",
+        "filename": "libFDK/include/FDK_archdef.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2016-10-19T17:09:13Z",
+      "side": 1,
+      "message": "this ! arm_arch_5te  test is somewhat redundant given the test on line 168.\n\nshould this one test only for arm?  we seem to have done all of our arm (32-bit) variants above this point, so is this intended to be the \"generic arm\" setting.",
+      "revId": "62db4bc2d9581451555f42907b9576f2235c7904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bcffef6a_08d990d9",
+        "filename": "libFDK/include/FDK_archdef.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2016-10-19T17:09:13Z",
+      "side": 1,
+      "message": "does the endianness matter? (e.g. the aarch64el)\ncan this test solely the __arch64__ setting and be correct?\n\nMy thinking here is for as simple a condition as we can manage.",
+      "revId": "62db4bc2d9581451555f42907b9576f2235c7904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bcffef6a_48a1d82f",
+        "filename": "libFDK/include/clz.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2016-10-19T17:09:13Z",
+      "side": 1,
+      "message": "There are a couple places that we do this test -- and my reading is that they could be a simple __arch64__ and do not need the __AARCH64EL__. I didn\u0027t see anything that was endian-specific about any of the places protected this way.\n\nOnly reason I can think of for including the aarch64el specifier is if you\u0027re seeing compilers that define that but do not define the base __arch64__ \n\nthis applies to most of these files -- they use the compound test when I think they could test just __arch64__",
+      "revId": "62db4bc2d9581451555f42907b9576f2235c7904",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
