@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "885bce3e_06f70fa7",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2017-01-19T20:49:37Z",
+      "side": 1,
+      "message": "Should we export some of these to the users of this library as well? It looks like the users have copy-pasted a subset of this list.\n\nYou\u0027d use export_include_dirs (and then remove them from local_include_dirs, since export_include_dirs implies local_include_dirs).",
+      "revId": "7ad83f43abd2f0a126130d13380330b0fef247a8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
