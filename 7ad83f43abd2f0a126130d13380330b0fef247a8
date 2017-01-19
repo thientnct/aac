@@ -34,6 +34,24 @@
       "revId": "7ad83f43abd2f0a126130d13380330b0fef247a8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "885bce3e_c94d88d5",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1071489
+      },
+      "writtenOn": "2017-01-19T21:12:58Z",
+      "side": 1,
+      "message": "Done in Patch Set 2.",
+      "parentUuid": "885bce3e_09a84060",
+      "revId": "7ad83f43abd2f0a126130d13380330b0fef247a8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
