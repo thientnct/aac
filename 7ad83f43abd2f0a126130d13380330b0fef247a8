@@ -16,6 +16,24 @@
       "revId": "7ad83f43abd2f0a126130d13380330b0fef247a8",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "885bce3e_09a84060",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1071489
+      },
+      "writtenOn": "2017-01-19T21:07:36Z",
+      "side": 1,
+      "message": "if there are no objections, I will make the change.\nI am one of those users (CL not merged yet: https://android-review.googlesource.com/#/c/322475/), and indeed I had to specify\nthe whole path from the top of the tree.\n\nBy cross-referencing the include dir list the above CL is using,\nand the lists from the other users of libFraunhoferAAC,\nit seems we have to export all directories.\nHence, I\u0027ll just rename local_include_dir to export_include_dir.",
+      "parentUuid": "885bce3e_06f70fa7",
+      "revId": "7ad83f43abd2f0a126130d13380330b0fef247a8",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
