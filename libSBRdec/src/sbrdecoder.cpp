@@ -968,17 +968,23 @@ SBR_ERROR sbrDecoder_Parse(
   SBR_ERROR errorStatus = SBRDEC_OK;
   SBR_HEADER_STATUS headerStatus = HEADER_NOT_PRESENT;
 
-  INT  startPos;
+  INT  startPos = 0;
   INT  CRCLen = 0;
   HANDLE_FDK_BITSTREAM hBsOriginal = hBs;
   FDK_CRCINFO  crcInfo;         /* shall be used for all other CRCs in the future (TBD) */
   INT          crcReg = 0;
   USHORT       drmSbrCrc = 0;
 
-  int  stereo;
+  int  stereo = 0;
   int  fDoDecodeSbrData = 1;
 
   int lastSlot, lastHdrSlot = 0, thisHdrSlot;
+
+  /* SBR sanity checks */
+  if ( self == NULL || self->pSbrElement[elementIndex] == NULL ) {
+    errorStatus = SBRDEC_NOT_INITIALIZED;
+    goto bail;
+  } 
 
   /* Reverse bits of DRM SBR payload */
   if ( (self->flags & SBRDEC_SYNTAX_DRM) && *count > 0 )
@@ -1028,12 +1034,6 @@ SBR_ERROR sbrDecoder_Parse(
 
   /* Remember start position of  SBR element */
   startPos = FDKgetValidBits(hBs);
-
-  /* SBR sanity checks */
-  if ( self == NULL || self->pSbrElement[elementIndex] == NULL ) {
-    errorStatus = SBRDEC_NOT_INITIALIZED;
-    goto bail;
-  } 
 
   hSbrElement = self->pSbrElement[elementIndex];
 
