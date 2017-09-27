@@ -16,6 +16,24 @@
       "revId": "426d72f874ba966d12e46da48a689dadd40d5d8e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "97fd0e5d_fdbfea16",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2017-09-27T23:33:08Z",
+      "side": 1,
+      "message": "Agree with switching this to -Wno-constant-conversion.",
+      "parentUuid": "21ae1ec8_86b70f7f",
+      "revId": "426d72f874ba966d12e46da48a689dadd40d5d8e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
