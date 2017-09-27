@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "21ae1ec8_86b70f7f",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2017-09-27T19:31:01Z",
+      "side": 1,
+      "message": "-Wno-error means we still get spammed with warnings, why not either fix them or -Wno-constant-conversion?",
+      "revId": "426d72f874ba966d12e46da48a689dadd40d5d8e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
