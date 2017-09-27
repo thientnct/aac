@@ -12,6 +12,7 @@ cc_library_static {
         "libSBRenc/src/*.cpp",
     ],
     cflags: [
+        "-Werror",
         "-Wno-sequence-point",
         "-Wno-extra",
         "-Wno-#warnings",
