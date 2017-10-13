@@ -102,7 +102,7 @@ amm-info@iis.fraunhofer.de
 *  maxima output.
 */
 #define SATURATE_RIGHT_SHIFT(src, scale, dBits)       \
-          (__builtin_mips_shll_s_w((src)>>scale,(DFRACT_BITS-(dBits)))>>(DFRACT_BITS-(dBits)))
+          (__builtin_mips_shll_s_w((src)>>(scale),(DFRACT_BITS-(dBits)))>>(DFRACT_BITS-(dBits)))
 
 
 #endif /*__mips_dsp */
