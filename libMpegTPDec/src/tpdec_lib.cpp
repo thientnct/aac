@@ -1750,7 +1750,7 @@ TRANSPORTDEC_ERROR transportDec_GetLibInfo(LIB_INFO *info) {
   info += i;
 
   info->module_id = FDK_TPDEC;
-#ifdef __ANDROID__
+#if defined(__ANDROID__) || defined(ANDROID)
   info->build_date = "";
   info->build_time = "";
 #else
