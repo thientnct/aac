@@ -117,7 +117,7 @@ amm-info@iis.fraunhofer.de
 #define AC_LIB_VL1 0
 #define AC_LIB_VL2 0
 #define AC_LIB_TITLE "Arithmetic Coder Lib"
-#ifdef __ANDROID__
+#if defined(__ANDROID__) || defined(ANDROID)
 #define AC_LIB_BUILD_DATE ""
 #define AC_LIB_BUILD_TIME ""
 #else

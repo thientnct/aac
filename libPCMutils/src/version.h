@@ -108,7 +108,7 @@ amm-info@iis.fraunhofer.de
 #define PCMUTIL_LIB_VL1 0
 #define PCMUTIL_LIB_VL2 0
 #define PCMUTIL_LIB_TITLE "PCM Utility Lib"
-#ifdef __ANDROID__
+#if defined(__ANDROID__) || defined(ANDROID)
 #define PCMUTIL_LIB_BUILD_DATE ""
 #define PCMUTIL_LIB_BUILD_TIME ""
 #else

@@ -1,6 +1,7 @@
-cc_library_static {
+cc_library {
     name: "libFraunhoferAAC",
     vendor_available: true,
+    host_supported: true,
     srcs: [
         "libAACdec/src/*.cpp",
         "libAACenc/src/*.cpp",
