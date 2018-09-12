@@ -189,6 +189,7 @@ static LINKSPEC_CPP AAC_DECODER_ERROR aacDecoder_Config(
   return err;
 }
 
+__attribute__((no_sanitize("cfi-icall")))
 LINKSPEC_CPP AAC_DECODER_ERROR aacDecoder_ConfigRaw(HANDLE_AACDECODER self,
                                                     UCHAR *conf[],
                                                     const UINT length[]) {

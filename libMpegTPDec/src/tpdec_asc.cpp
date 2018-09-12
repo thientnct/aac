@@ -1274,6 +1274,7 @@ static INT skipSbrHeader(HANDLE_FDK_BITSTREAM hBs, int isUsac) {
   return bitsToSkip;
 }
 
+__attribute__((no_sanitize("cfi-icall")))
 static INT ld_sbr_header(CSAudioSpecificConfig *asc, const INT dsFactor,
                          HANDLE_FDK_BITSTREAM hBs, CSTpCallBacks *cb) {
   const int channelConfiguration = asc->m_channelConfiguration;
@@ -1309,6 +1310,7 @@ bail:
   return error;
 }
 
+__attribute__((no_sanitize("cfi-icall")))
 static TRANSPORTDEC_ERROR EldSpecificConfig_Parse(CSAudioSpecificConfig *asc,
                                                   HANDLE_FDK_BITSTREAM hBs,
                                                   CSTpCallBacks *cb) {
@@ -1664,6 +1666,7 @@ static TRANSPORTDEC_ERROR configExtension(CSUsacConfig *usc,
    rsv603daDecoderConfig() ISO/IEC DIS 23008-3   Table 8
    UsacDecoderConfig()     ISO/IEC FDIS 23003-3  Table 6
   */
+__attribute__((no_sanitize("cfi-icall")))
 static TRANSPORTDEC_ERROR UsacRsv60DecoderConfig_Parse(
     CSAudioSpecificConfig *asc, HANDLE_FDK_BITSTREAM hBs,
     const CSTpCallBacks *cb) {
@@ -1910,6 +1913,7 @@ static TRANSPORTDEC_ERROR UsacConfig_SetCoreSbrFrameLengthIndex(
   return TRANSPORTDEC_OK;
 }
 
+__attribute__((no_sanitize("cfi-icall")))
 static TRANSPORTDEC_ERROR UsacConfig_Parse(CSAudioSpecificConfig *asc,
                                            HANDLE_FDK_BITSTREAM hBs,
                                            CSTpCallBacks *cb) {
@@ -2070,6 +2074,7 @@ static TRANSPORTDEC_ERROR AudioSpecificConfig_ExtensionParse(
  * API Functions
  */
 
+__attribute__((no_sanitize("cfi-icall")))
 void AudioSpecificConfig_Init(CSAudioSpecificConfig *asc) {
   FDKmemclear(asc, sizeof(CSAudioSpecificConfig));
 
@@ -2081,6 +2086,8 @@ void AudioSpecificConfig_Init(CSAudioSpecificConfig *asc) {
   CProgramConfig_Init(&asc->m_progrConfigElement);
 }
 
+
+__attribute__((no_sanitize("cfi-icall")))
 TRANSPORTDEC_ERROR AudioSpecificConfig_Parse(
     CSAudioSpecificConfig *self, HANDLE_FDK_BITSTREAM bs,
     int fExplicitBackwardCompatible, CSTpCallBacks *cb, UCHAR configMode,

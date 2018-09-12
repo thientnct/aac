@@ -259,6 +259,7 @@ HANDLE_TRANSPORTDEC transportDec_Open(const TRANSPORT_TYPE transportFmt,
   return hInput;
 }
 
+__attribute__((no_sanitize("cfi-icall")))
 TRANSPORTDEC_ERROR transportDec_OutOfBandConfig(HANDLE_TRANSPORTDEC hTp,
                                                 UCHAR *conf, const UINT length,
                                                 UINT layer) {
@@ -360,6 +361,7 @@ TRANSPORTDEC_ERROR transportDec_OutOfBandConfig(HANDLE_TRANSPORTDEC hTp,
   return err;
 }
 
+__attribute__((no_sanitize("cfi-icall")))
 TRANSPORTDEC_ERROR transportDec_InBandConfig(HANDLE_TRANSPORTDEC hTp,
                                              UCHAR *newConfig,
                                              const UINT newConfigLength,
@@ -857,6 +859,7 @@ static TRANSPORTDEC_ERROR additionalHoldOffNeeded(HANDLE_TRANSPORTDEC hTp,
   }
 }
 
+__attribute__((no_sanitize("cfi-icall")))
 static TRANSPORTDEC_ERROR transportDec_readHeader(
     HANDLE_TRANSPORTDEC hTp, HANDLE_FDK_BITSTREAM hBs, int syncLength,
     int ignoreBufferFullness, int *pRawDataBlockLength,

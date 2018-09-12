@@ -121,6 +121,7 @@ static UINT CLatmDemux_GetValue(HANDLE_FDK_BITSTREAM bs) {
   return value;
 }
 
+__attribute__((no_sanitize("cfi-icall")))
 static TRANSPORTDEC_ERROR CLatmDemux_ReadAudioMuxElement(
     HANDLE_FDK_BITSTREAM bs, CLatmDemux *pLatmDemux, int m_muxConfigPresent,
     CSTpCallBacks *pTpDecCallbacks, CSAudioSpecificConfig *pAsc,
@@ -233,6 +234,7 @@ bail:
   return (ErrorStatus);
 }
 
+__attribute__((no_sanitize("cfi-icall")))
 TRANSPORTDEC_ERROR CLatmDemux_Read(HANDLE_FDK_BITSTREAM bs,
                                    CLatmDemux *pLatmDemux, TRANSPORT_TYPE tt,
                                    CSTpCallBacks *pTpDecCallbacks,
@@ -280,6 +282,8 @@ TRANSPORTDEC_ERROR CLatmDemux_Read(HANDLE_FDK_BITSTREAM bs,
   return (ErrorStatus);
 }
 
+
+__attribute__((no_sanitize("cfi-icall")))
 TRANSPORTDEC_ERROR CLatmDemux_ReadStreamMuxConfig(
     HANDLE_FDK_BITSTREAM bs, CLatmDemux *pLatmDemux,
     CSTpCallBacks *pTpDecCallbacks, CSAudioSpecificConfig *pAsc,
