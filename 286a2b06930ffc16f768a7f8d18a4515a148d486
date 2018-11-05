@@ -22,6 +22,30 @@
       "revId": "286a2b06930ffc16f768a7f8d18a4515a148d486",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a9932e10_7e0f0242",
+        "filename": "libAACdec/src/usacdec_lpd.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1224,
+      "author": {
+        "id": 1002682
+      },
+      "writtenOn": "2018-11-05T20:55:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e49cabf4_e54538ef",
+      "range": {
+        "startLine": 1224,
+        "startChar": 22,
+        "endLine": 1224,
+        "endChar": 52
+      },
+      "revId": "286a2b06930ffc16f768a7f8d18a4515a148d486",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
