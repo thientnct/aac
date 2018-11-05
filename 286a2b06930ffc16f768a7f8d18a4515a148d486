@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e49cabf4_e54538ef",
+        "filename": "libAACdec/src/usacdec_lpd.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1224,
+      "author": {
+        "id": 1001525
+      },
+      "writtenOn": "2018-11-05T20:27:23Z",
+      "side": 1,
+      "message": "should these be FAC_FSCALE_MIN and FAC_FSCALE_MAX ?",
+      "range": {
+        "startLine": 1224,
+        "startChar": 22,
+        "endLine": 1224,
+        "endChar": 52
+      },
+      "revId": "286a2b06930ffc16f768a7f8d18a4515a148d486",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
