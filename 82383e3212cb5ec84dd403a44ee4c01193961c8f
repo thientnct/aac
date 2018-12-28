@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "78b6150e_f51bbe89",
+        "filename": "libSBRdec/src/env_dec.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 516,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2018-12-28T22:26:09Z",
+      "side": 1,
+      "message": "this leaves h_prev_data-\u003esfb_nrg_prev[i] untouched if otherChannel \u003d\u003d NULL.\nis it more appropriate to instead have lines 517-519 look more like the new 510..512?\n\nI suppose that makes sense only if the addend will be some non-zero default value when otherChannel \u003d\u003d null.",
+      "revId": "82383e3212cb5ec84dd403a44ee4c01193961c8f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
