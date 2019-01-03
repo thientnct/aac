@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ac90434c_c5e66631",
+        "filename": "libAACdec/src/aacdecoder_lib.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1405,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2019-01-03T18:00:25Z",
+      "side": 1,
+      "message": "should there be an else clause here?  perhaps setting\nself-\u003eqmfDomain.globalConf.nQmfTimeSlots_requested \u003d 0\n\notherwise it seems we\u0027re leaving this field uninitialized when nBandsAnalysis_requested \u003c\u003d 0",
+      "revId": "fa6ac19544dba0686a400c995265ba522cdc5589",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
