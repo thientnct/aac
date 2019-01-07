@@ -1509,6 +1509,9 @@ CAacDecoder_Init(HANDLE_AACDECODER self, const CSAudioSpecificConfig *asc,
         return AAC_DEC_UNSUPPORTED_FORMAT;
       }
       FDK_FALLTHROUGH;
+    case AOT_AAC_MAIN:
+      self->streamInfo.profile = 1;
+      break;
     case AOT_SBR:
     case AOT_PS:
     case AOT_ER_AAC_LC:

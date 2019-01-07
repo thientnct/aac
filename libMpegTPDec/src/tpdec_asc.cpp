@@ -2175,6 +2175,7 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_Parse(
   /* Parse whatever specific configs */
   switch (self->m_aot) {
     case AOT_AAC_LC:
+    case AOT_AAC_MAIN:
     case AOT_AAC_SCAL:
     case AOT_ER_AAC_LC:
     case AOT_ER_AAC_LD:
@@ -2224,6 +2225,7 @@ TRANSPORTDEC_ERROR AudioSpecificConfig_Parse(
   /* Frame length */
   switch (self->m_aot) {
     case AOT_AAC_LC:
+    case AOT_AAC_MAIN:
     case AOT_AAC_SCAL:
     case AOT_ER_AAC_LC:
     case AOT_ER_AAC_SCAL:
