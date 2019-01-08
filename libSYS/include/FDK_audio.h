@@ -220,7 +220,7 @@ typedef enum {
 } AUDIO_OBJECT_TYPE;
 
 #define CAN_DO_PS(aot)                                           \
-  ((aot) == AOT_AAC_LC || (aot) == AOT_SBR || (aot) == AOT_PS || \
+  ((aot) == AOT_AAC_LC || (aot) == AOT_AAC_MAIN || (aot) == AOT_SBR || (aot) == AOT_PS || \
    (aot) == AOT_ER_BSAC || (aot) == AOT_DRM_AAC)
 
 #define IS_USAC(aot) ((aot) == AOT_USAC)
