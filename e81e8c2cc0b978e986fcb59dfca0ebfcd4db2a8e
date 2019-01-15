@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e7583c07_df758186",
+        "filename": "libAACdec/src/aacdecoder.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 547,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2019-01-15T01:52:37Z",
+      "side": 1,
+      "message": "even though CProgramConfig_Compare() appears to only return -1/0/1/2 , I would have\nput \"default\" as falling into the failure/notsupported case along with -1 (and as part of this change 2).",
+      "range": {
+        "startLine": 547,
+        "startChar": 8,
+        "endLine": 547,
+        "endChar": 15
+      },
+      "revId": "e81e8c2cc0b978e986fcb59dfca0ebfcd4db2a8e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
