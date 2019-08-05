@@ -1,0 +1,40 @@
+cc_defaults {
+    name: "libaac_fuzzer_defaults",
+    static_libs: [
+        "libFraunhoferAAC",
+        "liblog",
+    ],
+    host_supported: true,
+}
+
+cc_fuzz {
+    name: "libaac_fuzzer",
+    defaults: [ "libaac_fuzzer_defaults" ],
+    srcs: [
+        "libaac_fuzzer.cpp",
+    ],
+}
+
+cc_fuzz {
+    name: "libaac_fuzzer_configraw",
+    defaults: [ "libaac_fuzzer_defaults" ],
+    srcs: [
+        "aacDecoder_ConfigRaw.cpp",
+    ],
+}
+
+cc_fuzz {
+    name: "libaac_fuzzer_decodeframe",
+    defaults: [ "libaac_fuzzer_defaults" ],
+    srcs: [
+        "aacDecoder_DecodeFrame.cpp",
+    ],
+}
+
+cc_fuzz {
+    name: "libaac_fuzzer_open",
+    defaults: [ "libaac_fuzzer_defaults" ],
+    srcs: [
+        "aacDecoder_Open.cpp",
+    ],
+}
