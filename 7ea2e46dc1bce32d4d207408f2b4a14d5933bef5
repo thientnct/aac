@@ -16,6 +16,24 @@
       "revId": "7ea2e46dc1bce32d4d207408f2b4a14d5933bef5",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c2dcbd8f_c28180b8",
+        "filename": "libAACdec/src/channel.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 596,
+      "author": {
+        "id": 1110304
+      },
+      "writtenOn": "2019-12-18T01:55:38Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "f29f5b99_d340e1dd",
+      "revId": "7ea2e46dc1bce32d4d207408f2b4a14d5933bef5",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
