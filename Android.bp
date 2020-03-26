@@ -1,6 +1,7 @@
 cc_library_static {
     name: "libFraunhoferAAC",
     vendor_available: true,
+    host_supported:true,
     srcs: [
         "libAACdec/src/*.cpp",
         "libAACenc/src/*.cpp",
@@ -51,4 +52,10 @@ cc_library_static {
         "libSACdec/include",
         "libSACenc/include",
     ],
+
+    target: {
+        darwin: {
+            enabled: false,
+        },
+    },
 }
