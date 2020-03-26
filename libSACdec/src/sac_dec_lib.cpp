@@ -1800,7 +1800,7 @@ int mpegSurroundDecoder_GetLibInfo(LIB_INFO *info) {
   info += i;
 
   info->module_id = FDK_MPSDEC;
-#ifdef __ANDROID__
+#ifdef ANDROID
   info->build_date = "";
   info->build_time = "";
 #else
