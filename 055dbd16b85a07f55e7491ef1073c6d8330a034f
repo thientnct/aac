@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "57e3e860_a2b3a0bc",
+        "filename": "fuzzer/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1002682
+      },
+      "writtenOn": "2020-03-26T22:33:35Z",
+      "side": 1,
+      "message": "formatting",
+      "range": {
+        "startLine": 14,
+        "startChar": 1,
+        "endLine": 14,
+        "endChar": 180
+      },
+      "revId": "055dbd16b85a07f55e7491ef1073c6d8330a034f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
