@@ -22,6 +22,30 @@
       "revId": "055dbd16b85a07f55e7491ef1073c6d8330a034f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9359634d_522e2744",
+        "filename": "fuzzer/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1047003
+      },
+      "writtenOn": "2020-03-27T15:31:02Z",
+      "side": 1,
+      "message": "Jean-Michel,\nWe tried few ways to break this to multiple lines, but that is resulting in wrong formatting of the resulting table when this is seen in browser\nhttps://android.googlesource.com/platform/external/aac/+/d41cddf9e9f46a1596c19505967261140a5bd6f8/fuzzer/README.md\n\nPlease let us know, if we should we remove the table completely to maintain this under 100 chars.",
+      "parentUuid": "57e3e860_a2b3a0bc",
+      "range": {
+        "startLine": 14,
+        "startChar": 1,
+        "endLine": 14,
+        "endChar": 180
+      },
+      "revId": "055dbd16b85a07f55e7491ef1073c6d8330a034f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
