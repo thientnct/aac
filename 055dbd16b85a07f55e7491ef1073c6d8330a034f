@@ -46,6 +46,30 @@
       "revId": "055dbd16b85a07f55e7491ef1073c6d8330a034f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7ba20c22_cbefa489",
+        "filename": "fuzzer/README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1047003
+      },
+      "writtenOn": "2020-04-08T22:37:10Z",
+      "side": 1,
+      "message": "Marking this resolved as per discussion with Jean-Michel",
+      "parentUuid": "9359634d_522e2744",
+      "range": {
+        "startLine": 14,
+        "startChar": 1,
+        "endLine": 14,
+        "endChar": 180
+      },
+      "revId": "055dbd16b85a07f55e7491ef1073c6d8330a034f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
