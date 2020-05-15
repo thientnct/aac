@@ -19,10 +19,43 @@
  */
 
 #include <stdint.h>
+#include <cmath>
+#include <algorithm>
 #include "aacdecoder_lib.h"
+
+#include "../libAACdec/src/aacdecoder.h"
+#include "../libMpegTPDec/src/tpdec_lib_struct.h"
 
 constexpr uint8_t kNumberOfLayers = 1;
 constexpr uint8_t kMaxChannelCount = 8;
+constexpr uint32_t kMaxConfigurationSize = 1024;
+
+UINT getHeaderSize(UCHAR *data, UINT size) {
+  HANDLE_AACDECODER aacDecoderHandle = aacDecoder_Open(TT_MP4_ADIF, kNumberOfLayers);
+  if (!aacDecoderHandle) {
+    return 0;
+  }
+
+  HANDLE_TRANSPORTDEC hTp = aacDecoderHandle->hInput;
+  FDK_BITSTREAM bs;
+  UCHAR tmpConf[kMaxConfigurationSize] = {0};
+  size = std::min(size, kMaxConfigurationSize);
+
+  FDKmemcpy(tmpConf, data, size);
+  FDKinitBitStream(&bs, tmpConf, kMaxConfigurationSize, size << 3, BS_READER);
+
+  UINT ascStartAnchor = FDKgetValidBits(&bs);
+  TRANSPORTDEC_ERROR err = AudioSpecificConfig_Parse(&hTp->asc[(1 * 1)], &bs, 1, &hTp->callbacks,
+                                                     AC_CM_DET_CFG_CHANGE, 0, AOT_NULL_OBJECT);
+  aacDecoder_Close(aacDecoderHandle);
+  if (err != TRANSPORTDEC_OK) {
+    return 0;
+  }
+  UINT ascEndAnchor = FDKgetValidBits(&bs);
+  UINT headerLengthInBits = (ascStartAnchor - ascEndAnchor);
+  UINT headerLengthInBytes = ceil(((double)headerLengthInBits / 8));
+  return headerLengthInBytes;
+}
 
 class Codec {
  public:
@@ -51,6 +84,12 @@ void Codec::deInitDecoder() {
 }
 
 void Codec::decodeFrames(UCHAR *data, UINT size) {
+  UINT headerSize = getHeaderSize(data, size);
+  if (headerSize != 0) {
+    aacDecoder_ConfigRaw(mAacDecoderHandle, &data, &headerSize);
+    data += headerSize;
+    size -= headerSize;
+  }
   while (size > 0) {
     UINT inputSize = size;
     UINT valid = size;
@@ -60,10 +99,10 @@ void Codec::decodeFrames(UCHAR *data, UINT size) {
       --size;
     } else {
       INT_PCM outputBuf[2048 * kMaxChannelCount];
-      aacDecoder_DecodeFrame(mAacDecoderHandle, outputBuf, 2048 * kMaxChannelCount, 0);
-      if (valid >= inputSize) {
-        return;
-      }
+      do {
+        mErrorCode =
+            aacDecoder_DecodeFrame(mAacDecoderHandle, outputBuf, 2048 * kMaxChannelCount, 0);
+      } while (mErrorCode == AAC_DEC_OK || mErrorCode == AAC_DEC_NOT_ENOUGH_BITS);
       UINT offset = inputSize - valid;
       data += offset;
       size = valid;
