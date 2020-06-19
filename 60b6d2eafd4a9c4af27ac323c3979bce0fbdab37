@@ -93,6 +93,30 @@
       "revId": "60b6d2eafd4a9c4af27ac323c3979bce0fbdab37",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cb7abc2e_dfbecf2f",
+        "filename": "fuzzer/aac_dec_fuzzer.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-06-19T03:33:14Z",
+      "side": 1,
+      "message": "one could also replace the parameter here with \"sizeof(outputBuf)\"\nthat\u0027s even better.\n\ni am curious what the 2048 represents and how it is chosen.",
+      "parentUuid": "bd2c1970_1a59ed65",
+      "range": {
+        "startLine": 120,
+        "startChar": 65,
+        "endLine": 120,
+        "endChar": 88
+      },
+      "revId": "60b6d2eafd4a9c4af27ac323c3979bce0fbdab37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
