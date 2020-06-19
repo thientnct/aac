@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "74dfa672_fa39823e",
+        "filename": "fuzzer/aac_dec_fuzzer.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1047003
+      },
+      "writtenOn": "2020-06-19T19:11:46Z",
+      "side": 1,
+      "message": "Even in case where only AAC_STRT was present, it is still better to continue rather than return\nGenerally only in cases where it is not possible for fuzzer binary to continue (like allocation failure) we should return, else we should continue to test. This has been approach so far in all the plugins coded so far and helps in better testing of the codec.",
+      "parentUuid": "50222707_42e81a0f",
+      "range": {
+        "startLine": 108,
+        "startChar": 1,
+        "endLine": 108,
+        "endChar": 3
+      },
+      "revId": "60b6d2eafd4a9c4af27ac323c3979bce0fbdab37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "df2f09ed_9f2b7a9a",
         "filename": "fuzzer/aac_dec_fuzzer.cpp",
         "patchSetId": 3
