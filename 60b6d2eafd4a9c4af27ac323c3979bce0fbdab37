@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c436c114_028ca27a",
+        "filename": "fuzzer/aac_dec_fuzzer.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-06-19T00:51:13Z",
+      "side": 1,
+      "message": "we don\u0027t seem to be handling the case of headerSize\u003d\u003d0 properly here.\nit would seem to me that if headerSize\u003d\u003d0, we should return immediately.",
+      "range": {
+        "startLine": 108,
+        "startChar": 1,
+        "endLine": 108,
+        "endChar": 3
+      },
+      "revId": "60b6d2eafd4a9c4af27ac323c3979bce0fbdab37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "df2f09ed_9f2b7a9a",
+        "filename": "fuzzer/aac_dec_fuzzer.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-06-19T00:51:13Z",
+      "side": 1,
+      "message": "this should be a variable so that we know we\u0027ll always have the same information\nhere and on line 117.",
+      "range": {
+        "startLine": 120,
+        "startChar": 65,
+        "endLine": 120,
+        "endChar": 88
+      },
+      "revId": "60b6d2eafd4a9c4af27ac323c3979bce0fbdab37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
