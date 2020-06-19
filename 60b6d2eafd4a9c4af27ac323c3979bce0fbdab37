@@ -117,6 +117,30 @@
       "revId": "60b6d2eafd4a9c4af27ac323c3979bce0fbdab37",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "eaafdbc7_fe2d7780",
+        "filename": "fuzzer/aac_dec_fuzzer.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1570907
+      },
+      "writtenOn": "2020-06-19T05:33:30Z",
+      "side": 1,
+      "message": "Updated to define a constant kMaxOutBufferSize and also replaced the line with sizeof(outputBuf).\nC2SoftAacDec.cpp was used as reference for the output buffer size computation where 2048 is used.\nhttps://cs.android.com/android/platform/superproject/+/master:frameworks/av/media/codec2/components/aac/C2SoftAacDec.cpp;l\u003d661;drc\u003dmaster?q\u003daacDecoder_DecodeFrame\nAdditionally, there is no documentation in AAC API document w.r.t. size of the buffer",
+      "parentUuid": "cb7abc2e_dfbecf2f",
+      "range": {
+        "startLine": 120,
+        "startChar": 65,
+        "endLine": 120,
+        "endChar": 88
+      },
+      "revId": "60b6d2eafd4a9c4af27ac323c3979bce0fbdab37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
