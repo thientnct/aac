@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "50222707_42e81a0f",
+        "filename": "fuzzer/aac_dec_fuzzer.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-06-19T18:39:55Z",
+      "side": 1,
+      "message": "i was thinking of the difference between\n-- an input sample that had no marke, such a legacy header\n-- an input that had a partial header -- say one that had the AAC_START token but then\n   went bad...",
+      "parentUuid": "52fcb05f_038295d4",
+      "range": {
+        "startLine": 108,
+        "startChar": 1,
+        "endLine": 108,
+        "endChar": 3
+      },
+      "revId": "60b6d2eafd4a9c4af27ac323c3979bce0fbdab37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "df2f09ed_9f2b7a9a",
         "filename": "fuzzer/aac_dec_fuzzer.cpp",
         "patchSetId": 3
@@ -141,6 +165,30 @@
       "revId": "60b6d2eafd4a9c4af27ac323c3979bce0fbdab37",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "546ca4e9_ad232bdc",
+        "filename": "fuzzer/aac_dec_fuzzer.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-06-19T18:39:55Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "eaafdbc7_fe2d7780",
+      "range": {
+        "startLine": 120,
+        "startChar": 65,
+        "endLine": 120,
+        "endChar": 88
+      },
+      "revId": "60b6d2eafd4a9c4af27ac323c3979bce0fbdab37",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
