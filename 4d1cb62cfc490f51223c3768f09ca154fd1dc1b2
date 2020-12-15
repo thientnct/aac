@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f971046d_4cf74a6c",
+        "filename": "Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-15T19:12:21Z",
+      "side": 1,
+      "message": "it\u0027s still a static library. is this comment now incorrect?\n(this is probably applicable to several of the CL\u0027s working on this...)",
+      "range": {
+        "startLine": 35,
+        "startChar": 8,
+        "endLine": 35,
+        "endChar": 55
+      },
+      "revId": "4d1cb62cfc490f51223c3768f09ca154fd1dc1b2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "356a5dc0_fe1ae78d",
+        "filename": "Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-15T19:12:21Z",
+      "side": 1,
+      "message": "i don\u0027t see any assembly code in this library.\nso what are we changing here?",
+      "range": {
+        "startLine": 38,
+        "startChar": 12,
+        "endLine": 38,
+        "endChar": 32
+      },
+      "revId": "4d1cb62cfc490f51223c3768f09ca154fd1dc1b2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
