@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "389873b0_ca651066",
+        "filename": "fuzzer/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-17T04:03:18Z",
+      "side": 1,
+      "message": "different between the two -- dec and enc.\ni don\u0027t see references to it in the dec fuzzer, so not sure why it is here.\nor why it\u0027s different between the two.",
+      "range": {
+        "startLine": 51,
+        "startChar": 4,
+        "endLine": 51,
+        "endChar": 17
+      },
+      "revId": "0c611c5e58a64a7025c2784a149f61fe293ec0f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
