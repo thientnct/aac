@@ -46,6 +46,98 @@
       },
       "revId": "0c611c5e58a64a7025c2784a149f61fe293ec0f4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86198d2c_3bf86520",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-17T04:47:00Z",
+      "side": 1,
+      "message": "this means (along with the setParam() calls on line 94 and 101) ...\nthat we aren\u0027t letting the fuzzer try an illegal combination such\nas sbdMode \u003d\u003d AAC_SBR_SINGLE_RATE and sbrRation \u003d\u003d 2   [or 3 or 114 or ...]\n\nSo I think we want to disconnect those two so that the fuzzer can try those different combinations.",
+      "range": {
+        "startLine": 89,
+        "startChar": 4,
+        "endLine": 93,
+        "endChar": 5
+      },
+      "revId": "0c611c5e58a64a7025c2784a149f61fe293ec0f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "821a2c4b_b0f5daa9",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-17T04:47:00Z",
+      "side": 1,
+      "message": "do we have a guarantee that the encoding doesn\u0027t modify these structures at all?\n\ni\u0027m inclined to doing this work right after line 160, where we initialize the inbuf side.",
+      "range": {
+        "startLine": 132,
+        "startChar": 4,
+        "endLine": 144,
+        "endChar": 0
+      },
+      "revId": "0c611c5e58a64a7025c2784a149f61fe293ec0f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71cde839_a0d54ed1",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-17T04:47:00Z",
+      "side": 1,
+      "message": "we\u0027re only populating 1 in any of these.\nwe could make all of these [NUM_BUFFERS]  or something like that.\nthis would also simplify line 156...",
+      "range": {
+        "startLine": 150,
+        "startChar": 7,
+        "endLine": 154,
+        "endChar": 0
+      },
+      "revId": "0c611c5e58a64a7025c2784a149f61fe293ec0f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "942d124e_a9fdd7e8",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-17T04:47:00Z",
+      "side": 1,
+      "message": "we\u0027re only ever doing 1 inbuf with our fuzzing.\n\nwe probably should have a fuzzing path that tests if this were to be \u003d\u003d2 or even larger, but at least 2 (because that is \u0027not 1\u0027).",
+      "range": {
+        "startLine": 156,
+        "startChar": 18,
+        "endLine": 156,
+        "endChar": 25
+      },
+      "revId": "0c611c5e58a64a7025c2784a149f61fe293ec0f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
