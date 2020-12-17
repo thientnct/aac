@@ -93,6 +93,30 @@
       },
       "revId": "4d1cb62cfc490f51223c3768f09ca154fd1dc1b2",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1ccfa02_128ddd6a",
+        "filename": "Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1580780
+      },
+      "writtenOn": "2020-12-17T16:04:26Z",
+      "side": 1,
+      "message": "Sorry it was aosp/1518417, and I deleted the CL since it won\u0027t build with patch #4.",
+      "parentUuid": "bcf32de8_69c1c395",
+      "range": {
+        "startLine": 38,
+        "startChar": 12,
+        "endLine": 38,
+        "endChar": 32
+      },
+      "revId": "4d1cb62cfc490f51223c3768f09ca154fd1dc1b2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
