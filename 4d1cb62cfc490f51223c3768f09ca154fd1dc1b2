@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b3556496_44a84f70",
+        "filename": "Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1580780
+      },
+      "writtenOn": "2020-12-17T15:44:38Z",
+      "side": 1,
+      "message": "Done. I will also remove this comments in all the applicable Cls.",
+      "parentUuid": "f971046d_4cf74a6c",
+      "range": {
+        "startLine": 35,
+        "startChar": 8,
+        "endLine": 35,
+        "endChar": 55
+      },
+      "revId": "4d1cb62cfc490f51223c3768f09ca154fd1dc1b2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "356a5dc0_fe1ae78d",
         "filename": "Android.bp",
         "patchSetId": 3
@@ -37,6 +61,30 @@
       "writtenOn": "2020-12-15T19:12:21Z",
       "side": 1,
       "message": "i don\u0027t see any assembly code in this library.\nso what are we changing here?",
+      "range": {
+        "startLine": 38,
+        "startChar": 12,
+        "endLine": 38,
+        "endChar": 32
+      },
+      "revId": "4d1cb62cfc490f51223c3768f09ca154fd1dc1b2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bcf32de8_69c1c395",
+        "filename": "Android.bp",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1580780
+      },
+      "writtenOn": "2020-12-17T15:44:38Z",
+      "side": 1,
+      "message": "In that case, we can just enable CFI without assembly support to increase coverage. This would also mean we can disregard the changes in ag/1518417 since assembly_support was enabled in those CL to solve linker error.\n\nI ran the tests without the assembly_support and there wasn\u0027t any cfi crashes.",
+      "parentUuid": "356a5dc0_fe1ae78d",
       "range": {
         "startLine": 38,
         "startChar": 12,
