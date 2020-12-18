@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c61247de_cbc87327",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-18T04:00:04Z",
+      "side": 1,
+      "message": "(I did like this version better -- even though I had many additional comments)",
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ddae32a5_c1cb35bc",
