@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ddae32a5_c1cb35bc",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-18T03:59:27Z",
+      "side": 1,
+      "message": "probably overkill, but if i understand how the fuzzer works it will quickly decide\nthat it doesn\u0027t need more than a handful of buffers to expose problems with multiple\ninput buffer stuf...",
+      "range": {
+        "startLine": 126,
+        "startChar": 74,
+        "endLine": 126,
+        "endChar": 83
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40d847c8_e384460b",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-18T03:59:27Z",
+      "side": 1,
+      "message": "good that we\u0027re doing more.\nI thought that the \u0027size\u0027 bytes of \u0027data\u0027 would be partitioned between\nour input buffers, not replicated. \n\nas I think about it, i don\u0027t know that it makes a difference, so we don\u0027t need to rework\nthis.",
+      "range": {
+        "startLine": 147,
+        "startChar": 12,
+        "endLine": 147,
+        "endChar": 53
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dbbb025c_27787bee",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-18T03:59:27Z",
+      "side": 1,
+      "message": "and i just want confirm that this is\nsize in bytes\nnot\nsize in elements.",
+      "range": {
+        "startLine": 149,
+        "startChar": 33,
+        "endLine": 149,
+        "endChar": 40
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0b55f18b_b37c1554",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-18T03:59:27Z",
+      "side": 1,
+      "message": "curious to learn how things behave if:\n\nsize is odd\nelsize is sizeof(int16) \u003d\u003d 2\nbut we have multiple input buffers...\ni\u0027ll be curious to see if the codec takes the last byte from buffer1 and first byte from buffer2 to assemble the 16 bit element.  or does it report some failure mode.\n\nthis is not a \"change the code\", rather a \"i wonder which way it treats that\" question.\n[ i expect it throws a failure of some sort rather than trying to handle samples that\nstraddle buffers].",
+      "range": {
+        "startLine": 150,
+        "startChar": 37,
+        "endLine": 150,
+        "endChar": 52
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6d3d4700_00a109a7",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-18T03:59:27Z",
+      "side": 1,
+      "message": "we\u0027ve had a few of the fuzzers fail for over-allocating on the stack.\nlet\u0027s allocate this in the heap instead.\n\nalso thinking out loud about size bytes of input to size bytes of output -- and whether\nwe believe that the encoded data will always be smaller than the input. i can imagine that for certain very small inputs, the output will include some preamble + the encoded bits.\nand while \"encoded bits\" might always be smaller than \u0027input\u0027, not sure about whatever preamble....\n\nso let\u0027s think about whether the output buffer needs to be larger.\non the other hand -- if it\u0027s too small in some configurations, that does test whether\nthe codec is stopping in time....",
+      "range": {
+        "startLine": 160,
+        "startChar": 8,
+        "endLine": 160,
+        "endChar": 29
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0bbf71c_9d36dd7a",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-18T03:59:27Z",
+      "side": 1,
+      "message": "i\u0027m leery of reusing the same output space for all of the out buffers.\ndoesn\u0027t mean it\u0027s wrong.... but let\u0027s watch things.\nI could see the codec refusing to do this, because it would mean there\u0027s no way for the\nreceiver to pick up all the pieces of the output -- some would be overwritten before the\nencoder returns.\n\nlet\u0027s think about this.",
+      "range": {
+        "startLine": 167,
+        "startChar": 32,
+        "endLine": 167,
+        "endChar": 38
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}

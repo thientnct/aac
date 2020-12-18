@@ -48,6 +48,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0eff86b3_c715148e",
+        "filename": "fuzzer/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2020-12-18T03:59:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d5d95ec6_6c769776",
+      "range": {
+        "startLine": 51,
+        "startChar": 4,
+        "endLine": 51,
+        "endChar": 17
+      },
+      "revId": "0c611c5e58a64a7025c2784a149f61fe293ec0f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "86198d2c_3bf86520",
