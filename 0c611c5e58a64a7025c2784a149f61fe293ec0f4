@@ -71,6 +71,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "999c8e92_ca18154b",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1653964
+      },
+      "writtenOn": "2020-12-18T02:11:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "86198d2c_3bf86520",
+      "range": {
+        "startLine": 89,
+        "startChar": 4,
+        "endLine": 93,
+        "endChar": 5
+      },
+      "revId": "0c611c5e58a64a7025c2784a149f61fe293ec0f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "821a2c4b_b0f5daa9",
@@ -84,6 +108,30 @@
       "writtenOn": "2020-12-17T04:47:00Z",
       "side": 1,
       "message": "do we have a guarantee that the encoding doesn\u0027t modify these structures at all?\n\ni\u0027m inclined to doing this work right after line 160, where we initialize the inbuf side.",
+      "range": {
+        "startLine": 132,
+        "startChar": 4,
+        "endLine": 144,
+        "endChar": 0
+      },
+      "revId": "0c611c5e58a64a7025c2784a149f61fe293ec0f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a755abc1_d9a63e1c",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1653964
+      },
+      "writtenOn": "2020-12-18T02:11:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "821a2c4b_b0f5daa9",
       "range": {
         "startLine": 132,
         "startChar": 4,
@@ -117,6 +165,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf23c7ab_49e4b619",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1653964
+      },
+      "writtenOn": "2020-12-18T02:11:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "71cde839_a0d54ed1",
+      "range": {
+        "startLine": 150,
+        "startChar": 7,
+        "endLine": 154,
+        "endChar": 0
+      },
+      "revId": "0c611c5e58a64a7025c2784a149f61fe293ec0f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "942d124e_a9fdd7e8",
@@ -130,6 +202,30 @@
       "writtenOn": "2020-12-17T04:47:00Z",
       "side": 1,
       "message": "we\u0027re only ever doing 1 inbuf with our fuzzing.\n\nwe probably should have a fuzzing path that tests if this were to be \u003d\u003d2 or even larger, but at least 2 (because that is \u0027not 1\u0027).",
+      "range": {
+        "startLine": 156,
+        "startChar": 18,
+        "endLine": 156,
+        "endChar": 25
+      },
+      "revId": "0c611c5e58a64a7025c2784a149f61fe293ec0f4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "994d2632_0711ab01",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1653964
+      },
+      "writtenOn": "2020-12-18T02:11:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "942d124e_a9fdd7e8",
       "range": {
         "startLine": 156,
         "startChar": 18,
