@@ -231,6 +231,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "27ed7f49_0070fdf7",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1047003
+      },
+      "writtenOn": "2020-12-19T19:14:48Z",
+      "side": 1,
+      "message": "Anuj, You meant fuzzer has been updated to use heap instead of stack for output buffer.\nPatchset 3 uses heap for output buffer.",
+      "parentUuid": "26d488bf_f51cea5e",
+      "range": {
+        "startLine": 160,
+        "startChar": 8,
+        "endLine": 160,
+        "endChar": 29
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d0bbf71c_9d36dd7a",
         "filename": "fuzzer/aac_enc_fuzzer.cpp",
         "patchSetId": 2
