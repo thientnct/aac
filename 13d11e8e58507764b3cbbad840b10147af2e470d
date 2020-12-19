@@ -43,6 +43,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "44bd4cc9_6be69ca6",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1653964
+      },
+      "writtenOn": "2020-12-19T05:37:46Z",
+      "side": 1,
+      "message": "Hi Ray,\nFuzzer has been updated to use kMaxBuffers (3).",
+      "parentUuid": "ddae32a5_c1cb35bc",
+      "range": {
+        "startLine": 126,
+        "startChar": 74,
+        "endLine": 126,
+        "endChar": 83
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "40d847c8_e384460b",
         "filename": "fuzzer/aac_enc_fuzzer.cpp",
         "patchSetId": 2
@@ -66,6 +90,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d29deef0_5bcc5d49",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1653964
+      },
+      "writtenOn": "2020-12-19T05:37:46Z",
+      "side": 1,
+      "message": "With the new changes, \u0027data\u0027 is sent both as audio and ancillry input. Metadata is derived using several bytes of \u0027data\u0027. Hence each of these arrays hold 3 values which also serves the purpose of testing the codec with more than 1 buffers.",
+      "parentUuid": "40d847c8_e384460b",
+      "range": {
+        "startLine": 147,
+        "startChar": 12,
+        "endLine": 147,
+        "endChar": 53
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "dbbb025c_27787bee",
         "filename": "fuzzer/aac_enc_fuzzer.cpp",
         "patchSetId": 2
@@ -77,6 +125,30 @@
       "writtenOn": "2020-12-18T03:59:27Z",
       "side": 1,
       "message": "and i just want confirm that this is\nsize in bytes\nnot\nsize in elements.",
+      "range": {
+        "startLine": 149,
+        "startChar": 33,
+        "endLine": 149,
+        "endChar": 40
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "56632590_2b5d432c",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1653964
+      },
+      "writtenOn": "2020-12-19T05:37:46Z",
+      "side": 1,
+      "message": "Yes, this is the size in bytes.",
+      "parentUuid": "dbbb025c_27787bee",
       "range": {
         "startLine": 149,
         "startChar": 33,
@@ -135,6 +207,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "26d488bf_f51cea5e",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1653964
+      },
+      "writtenOn": "2020-12-19T05:37:46Z",
+      "side": 1,
+      "message": "Fuzzer has been updated to use stack and not heap. Apart from this, the output buffer size has been set to a max value of 8192 as per the explanation and example provided in the aac encoder codeca.\nReference: https://cs.android.com/android/platform/superproject/+/master:external/aac/libAACenc/include/aacenc_lib.h;drc\u003d443d38963e804ce1133e2338937e1cf389092b52;l\u003d248",
+      "parentUuid": "6d3d4700_00a109a7",
+      "range": {
+        "startLine": 160,
+        "startChar": 8,
+        "endLine": 160,
+        "endChar": 29
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d0bbf71c_9d36dd7a",
         "filename": "fuzzer/aac_enc_fuzzer.cpp",
         "patchSetId": 2
@@ -146,6 +242,30 @@
       "writtenOn": "2020-12-18T03:59:27Z",
       "side": 1,
       "message": "i\u0027m leery of reusing the same output space for all of the out buffers.\ndoesn\u0027t mean it\u0027s wrong.... but let\u0027s watch things.\nI could see the codec refusing to do this, because it would mean there\u0027s no way for the\nreceiver to pick up all the pieces of the output -- some would be overwritten before the\nencoder returns.\n\nlet\u0027s think about this.",
+      "range": {
+        "startLine": 167,
+        "startChar": 32,
+        "endLine": 167,
+        "endChar": 38
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d584293_3d11e517",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1653964
+      },
+      "writtenOn": "2020-12-19T05:37:46Z",
+      "side": 1,
+      "message": "Updated the fuzzer to use different buffers instead of reusing the same buffer.",
+      "parentUuid": "d0bbf71c_9d36dd7a",
       "range": {
         "startLine": 167,
         "startChar": 32,
