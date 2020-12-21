@@ -68,6 +68,30 @@
       },
       "revId": "bffe08fcee29bc1a546ae9184b5c3d0ade750887",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0b06329_feba3db6",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 1047003
+      },
+      "writtenOn": "2020-12-21T00:42:03Z",
+      "side": 1,
+      "message": "Ray,\nYes. This is redundant.\n\nAnuj, \nPlease remove 284-287 as an allocation failure will abort instead of returning an error.",
+      "parentUuid": "9d5139d0_439eb5f1",
+      "range": {
+        "startLine": 283,
+        "startChar": 9,
+        "endLine": 285,
+        "endChar": 49
+      },
+      "revId": "bffe08fcee29bc1a546ae9184b5c3d0ade750887",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
