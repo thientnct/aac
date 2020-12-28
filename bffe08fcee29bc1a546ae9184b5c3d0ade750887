@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "94d52375_8e810826",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 1653964
+      },
+      "writtenOn": "2020-12-28T05:05:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dd50f358_d34f55f7",
+      "range": {
+        "startLine": 263,
+        "startChar": 15,
+        "endLine": 263,
+        "endChar": 27
+      },
+      "revId": "bffe08fcee29bc1a546ae9184b5c3d0ade750887",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4b8c9610_870f50f3",
@@ -37,6 +61,30 @@
       "writtenOn": "2020-12-20T20:17:27Z",
       "side": 1,
       "message": "i hadn\u0027t thought about this -- changing types.\ni like the idea of being able to test all of the input types.\n\nsince fuzzing is intended to try different combinations of things to see what breaks,\nshould we have something that lets us try different combinations of these?  \ne.g. sometimes just in_audio_data, sometimes all 3 parameter blocks?",
+      "range": {
+        "startLine": 266,
+        "startChar": 25,
+        "endLine": 266,
+        "endChar": 81
+      },
+      "revId": "bffe08fcee29bc1a546ae9184b5c3d0ade750887",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86515e11_8d88de52",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 1653964
+      },
+      "writtenOn": "2020-12-28T05:05:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4b8c9610_870f50f3",
       "range": {
         "startLine": 266,
         "startChar": 25,
@@ -84,6 +132,30 @@
       "side": 1,
       "message": "Ray,\nYes. This is redundant.\n\nAnuj, \nPlease remove 284-287 as an allocation failure will abort instead of returning an error.",
       "parentUuid": "9d5139d0_439eb5f1",
+      "range": {
+        "startLine": 283,
+        "startChar": 9,
+        "endLine": 285,
+        "endChar": 49
+      },
+      "revId": "bffe08fcee29bc1a546ae9184b5c3d0ade750887",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c407484_aa603670",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 3
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 1653964
+      },
+      "writtenOn": "2020-12-28T05:05:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e0b06329_feba3db6",
       "range": {
         "startLine": 283,
         "startChar": 9,
