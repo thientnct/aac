@@ -1,0 +1,9 @@
+Code-Review+1: Ray Essick <essick@google.com>
+Code-Review+2: Jean-Michel Trivi <jmtrivi@google.com>
+Presubmit-Verified+2: Treehugger Robot <treehugger-gerrit@google.com>
+Lint+1: Lint 🤖 <ayeaye-gerrit@google.com>
+Submitted-by: Cindy Zhou <zhouci@google.com>
+Submitted-at: Fri, 08 Jan 2021 17:47:23 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/external/aac/+/1518238
+Project: platform/external/aac
+Branch: refs/heads/master
