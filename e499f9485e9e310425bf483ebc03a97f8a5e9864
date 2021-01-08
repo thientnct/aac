@@ -1,0 +1,9 @@
+Autosubmit+1: Alice Kuo <aliceypkuo@google.com>
+Presubmit-Verified+2: Treehugger Robot <treehugger-gerrit@google.com>
+Lint+1: Lint 🤖 <ayeaye-gerrit@google.com>
+Code-Review+2: Jean-Michel Trivi <jmtrivi@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Fri, 08 Jan 2021 15:47:46 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/external/aac/+/1542709
+Project: platform/external/aac
+Branch: refs/heads/master
