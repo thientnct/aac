@@ -65,6 +65,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7cbabef_5e6b3b39",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1047003
+      },
+      "writtenOn": "2021-01-12T18:28:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "44bd4cc9_6be69ca6",
+      "range": {
+        "startLine": 126,
+        "startChar": 74,
+        "endLine": 126,
+        "endChar": 83
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "40d847c8_e384460b",
@@ -102,6 +126,30 @@
       "side": 1,
       "message": "With the new changes, \u0027data\u0027 is sent both as audio and ancillry input. Metadata is derived using several bytes of \u0027data\u0027. Hence each of these arrays hold 3 values which also serves the purpose of testing the codec with more than 1 buffers.",
       "parentUuid": "40d847c8_e384460b",
+      "range": {
+        "startLine": 147,
+        "startChar": 12,
+        "endLine": 147,
+        "endChar": 53
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e48519ef_d2c6d96e",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1047003
+      },
+      "writtenOn": "2021-01-12T18:28:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d29deef0_5bcc5d49",
       "range": {
         "startLine": 147,
         "startChar": 12,
@@ -159,6 +207,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8800f25_1e952828",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1047003
+      },
+      "writtenOn": "2021-01-12T18:28:36Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "56632590_2b5d432c",
+      "range": {
+        "startLine": 149,
+        "startChar": 33,
+        "endLine": 149,
+        "endChar": 40
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0b55f18b_b37c1554",
@@ -172,6 +244,30 @@
       "writtenOn": "2020-12-18T03:59:27Z",
       "side": 1,
       "message": "curious to learn how things behave if:\n\nsize is odd\nelsize is sizeof(int16) \u003d\u003d 2\nbut we have multiple input buffers...\ni\u0027ll be curious to see if the codec takes the last byte from buffer1 and first byte from buffer2 to assemble the 16 bit element.  or does it report some failure mode.\n\nthis is not a \"change the code\", rather a \"i wonder which way it treats that\" question.\n[ i expect it throws a failure of some sort rather than trying to handle samples that\nstraddle buffers].",
+      "range": {
+        "startLine": 150,
+        "startChar": 37,
+        "endLine": 150,
+        "endChar": 52
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb6a9756_b5b9404c",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1047003
+      },
+      "writtenOn": "2021-01-12T18:28:36Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "0b55f18b_b37c1554",
       "range": {
         "startLine": 150,
         "startChar": 37,
@@ -277,6 +373,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a1bf205_5a7fe2ab",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1047003
+      },
+      "writtenOn": "2021-01-12T18:28:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9c1e44e9_3d4c72fb",
+      "range": {
+        "startLine": 160,
+        "startChar": 8,
+        "endLine": 160,
+        "endChar": 29
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d0bbf71c_9d36dd7a",
@@ -314,6 +434,30 @@
       "side": 1,
       "message": "Updated the fuzzer to use different buffers instead of reusing the same buffer.",
       "parentUuid": "d0bbf71c_9d36dd7a",
+      "range": {
+        "startLine": 167,
+        "startChar": 32,
+        "endLine": 167,
+        "endChar": 38
+      },
+      "revId": "13d11e8e58507764b3cbbad840b10147af2e470d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6b18979_ddbdad84",
+        "filename": "fuzzer/aac_enc_fuzzer.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1047003
+      },
+      "writtenOn": "2021-01-12T18:28:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9d584293_3d11e517",
       "range": {
         "startLine": 167,
         "startChar": 32,
