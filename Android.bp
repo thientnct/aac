@@ -1,3 +1,14 @@
+package {
+    default_applicable_licenses: ["external_aac_license"],
+}
+
+license {
+    name: "external_aac_license",
+    visibility: [":__subpackages__"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0","legacy_by_exception_only"],
+    license_text: ["NOTICE"],
+}
+
 cc_library_static {
     name: "libFraunhoferAAC",
     vendor_available: true,

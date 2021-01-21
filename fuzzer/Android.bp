@@ -18,6 +18,10 @@
  * Originally developed and contributed by Ittiam Systems Pvt. Ltd, Bangalore
  */
 
+package {
+    default_applicable_licenses: ["external_aac_license"],
+}
+
 cc_defaults {
     name: "aac_fuzz_defaults",
     host_supported: true,
