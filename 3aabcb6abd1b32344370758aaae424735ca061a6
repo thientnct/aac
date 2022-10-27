@@ -34,6 +34,24 @@
       "parentUuid": "35ce2ddb_96d9da0b",
       "revId": "3aabcb6abd1b32344370758aaae424735ca061a6",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dc513429_fe29fa23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2022-10-27T23:25:21Z",
+      "side": 1,
+      "message": "thanks! in that case, may i trouble you for OWNERS?\n\nare there any benchmarks for this? (i\u0027m wondering about stuff like the clz specializations that are there for arm/arm64/x86/x86-64, for example...)",
+      "parentUuid": "8f902d3d_d18b883e",
+      "revId": "3aabcb6abd1b32344370758aaae424735ca061a6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
