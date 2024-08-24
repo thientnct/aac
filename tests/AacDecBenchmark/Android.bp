@@ -1,0 +1,17 @@
+package {
+    default_applicable_licenses: ["external_aac_license"],
+}
+
+cc_benchmark {
+    name: "AacDecBenchmark",
+    host_supported: true,
+    srcs: ["AacDecBenchmark.cpp"],
+    shared_libs: [
+        "liblog",
+    ],
+    static_libs: [
+        "libFraunhoferAAC",
+        "libgoogle-benchmark",
+    ],
+    test_suites: ["device-tests"],
+}
