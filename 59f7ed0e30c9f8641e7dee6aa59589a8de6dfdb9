@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "75450506_c6279599",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2024-08-26T15:21:28Z",
+      "side": 1,
+      "message": "Global approval for a safe change removing stale OWNERS entries.",
+      "revId": "59f7ed0e30c9f8641e7dee6aa59589a8de6dfdb9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
