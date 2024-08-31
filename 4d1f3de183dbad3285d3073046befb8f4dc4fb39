@@ -52,6 +52,24 @@
       "parentUuid": "f2920d12_e2ee0268",
       "revId": "4d1f3de183dbad3285d3073046befb8f4dc4fb39",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ea05624_e1e5d7f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002682
+      },
+      "writtenOn": "2024-08-31T03:36:20Z",
+      "side": 1,
+      "message": "Does the benchmark library perform configuration of the device to ensure the same core config is used between two runs?",
+      "parentUuid": "0abb085f_242dfd64",
+      "revId": "4d1f3de183dbad3285d3073046befb8f4dc4fb39",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
