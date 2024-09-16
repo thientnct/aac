@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3402ad95_68898209",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1956242
+      },
+      "writtenOn": "2024-09-16T22:38:23Z",
+      "side": 1,
+      "message": "Thanks! A few minor nits",
+      "revId": "666f92d19cfc615c97c7918053e63b593a418bae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e81a2d32_b35e1d62",
+        "filename": "tests/AacDecBenchmark/AacDecBenchmark.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1956242
+      },
+      "writtenOn": "2024-09-16T22:38:23Z",
+      "side": 1,
+      "message": "nit: I feel like we can just do these initialization in the constructor initializer list, and just assert when there is anything in `aacDecoder_Open`/`aacDecoder_GetStreamInfo in` goes wrong: there is nothing to benchmark if the decoder failed initialization.\n\nwe won\u0027t need to validate `mStreamInfo` every time in the getChannels/getFrameSize/getSampleRate methods.",
+      "range": {
+        "startLine": 39,
+        "startChar": 9,
+        "endLine": 39,
+        "endChar": 22
+      },
+      "revId": "666f92d19cfc615c97c7918053e63b593a418bae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0479ce8a_48d77d6e",
+        "filename": "tests/AacDecBenchmark/AacDecBenchmark.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 1956242
+      },
+      "writtenOn": "2024-09-16T22:38:23Z",
+      "side": 1,
+      "message": "nit: does it make sense to have this also as part of the binary arguments? We can make `/sdcard/test/AacDecBenchmark-1.0/` as the default parameter value of `RegisterBenchmarks`. This way we do not have the assumption in README:\n```\nThe resource folder is assumed to be at /sdcard/test/. You can use a different location, but you have to modify the rest of the instructions to replace /sdcard/test/ with wherever you chose to put the files.\n```",
+      "range": {
+        "startLine": 300,
+        "startChar": 16,
+        "endLine": 300,
+        "endChar": 29
+      },
+      "revId": "666f92d19cfc615c97c7918053e63b593a418bae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48ef7365_6fe3a350",
+        "filename": "tests/AacDecBenchmark/README.md",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1956242
+      },
+      "writtenOn": "2024-09-16T22:38:23Z",
+      "side": 1,
+      "message": "Is this URL working? I got 404",
+      "range": {
+        "startLine": 13,
+        "startChar": 53,
+        "endLine": 13,
+        "endChar": 156
+      },
+      "revId": "666f92d19cfc615c97c7918053e63b593a418bae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
