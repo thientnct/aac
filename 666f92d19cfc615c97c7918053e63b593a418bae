@@ -43,6 +43,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c0b5eb8f_b7cea2c1",
+        "filename": "tests/AacDecBenchmark/AacDecBenchmark.cpp",
+        "patchSetId": 9
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1546599
+      },
+      "writtenOn": "2024-09-17T14:39:30Z",
+      "side": 1,
+      "message": "Shunkai,\nConstructor can\u0027t return an error and is expected to always succeed.\nassert will only be useful in debug builds, but in release build it would continue.\n\nIMHO, the current initialize() approach is cleaner to handle any errors.\n\nPlease let us know your thoughts.",
+      "parentUuid": "e81a2d32_b35e1d62",
+      "range": {
+        "startLine": 39,
+        "startChar": 9,
+        "endLine": 39,
+        "endChar": 22
+      },
+      "revId": "666f92d19cfc615c97c7918053e63b593a418bae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0479ce8a_48d77d6e",
         "filename": "tests/AacDecBenchmark/AacDecBenchmark.cpp",
         "patchSetId": 9
