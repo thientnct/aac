@@ -159,6 +159,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e84e64c_ae170d19",
+        "filename": "tests/AacDecBenchmark/DynamicConfig.xml",
+        "patchSetId": 9
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1546599
+      },
+      "writtenOn": "2024-10-02T19:29:11Z",
+      "side": 1,
+      "message": "Zip is uploaded.",
+      "parentUuid": "81467789_e40ea8fd",
+      "range": {
+        "startLine": 18,
+        "startChar": 15,
+        "endLine": 18,
+        "endChar": 118
+      },
+      "revId": "666f92d19cfc615c97c7918053e63b593a418bae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "48ef7365_6fe3a350",
@@ -196,6 +220,30 @@
       "side": 1,
       "message": "Following CL needs to be merged and then the zip file needs to be uploaded to this location by someone at Google.\nhttps://android-review.git.corp.google.com/c/platform/media/cts/+/3249946\n\nFor now, the tests were done by changing the DynamicConfig.xml to point to a locally hosted path.",
       "parentUuid": "48ef7365_6fe3a350",
+      "range": {
+        "startLine": 13,
+        "startChar": 53,
+        "endLine": 13,
+        "endChar": 156
+      },
+      "revId": "666f92d19cfc615c97c7918053e63b593a418bae",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c98b37c2_8db05a59",
+        "filename": "tests/AacDecBenchmark/README.md",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1546599
+      },
+      "writtenOn": "2024-10-02T19:29:11Z",
+      "side": 1,
+      "message": "Zip is uploaded.",
+      "parentUuid": "c4d329e9_fcd0ccb5",
       "range": {
         "startLine": 13,
         "startChar": 53,
