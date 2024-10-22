@@ -3,6 +3,110 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3e2d0647_011ddb84",
+        "filename": "tests/AacEncBenchmark/AacEncBenchmark.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1956242
+      },
+      "writtenOn": "2024-10-22T16:47:55Z",
+      "side": 1,
+      "message": "can we make them const and move to initializer list?",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 0
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "1372a5e3_f85b4d8f",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "tests/AacEncBenchmark/AacEncBenchmark.cpp",
+              "range": {
+                "startLine": 40,
+                "startChar": 0,
+                "endLine": 46,
+                "endChar": 0
+              },
+              "replacement": "        : mAACEncoder(nullptr), mSampleRate(sampleRate), mBitRate(bitRate), mProfile(profile),\n          mChannelCount(channelCount) {}\n"
+            }
+          ]
+        }
+      ],
+      "revId": "439057639bc7d4ca01ce5d5fa3391cc33fe771dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cee3946e_520814c0",
+        "filename": "tests/AacEncBenchmark/AacEncBenchmark.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1956242
+      },
+      "writtenOn": "2024-10-22T16:47:55Z",
+      "side": 1,
+      "message": "should we make the size dynamically calculated?",
+      "range": {
+        "startLine": 87,
+        "startChar": 43,
+        "endLine": 87,
+        "endChar": 47
+      },
+      "revId": "439057639bc7d4ca01ce5d5fa3391cc33fe771dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ee7235b_352d9523",
+        "filename": "tests/AacEncBenchmark/AacEncBenchmark.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 1956242
+      },
+      "writtenOn": "2024-10-22T16:47:55Z",
+      "side": 1,
+      "message": "should we early return after this? same for line#171 and 176",
+      "revId": "439057639bc7d4ca01ce5d5fa3391cc33fe771dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4ebe275_16047a4f",
+        "filename": "tests/AacEncBenchmark/AacEncBenchmark.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1956242
+      },
+      "writtenOn": "2024-10-22T16:47:55Z",
+      "side": 1,
+      "message": "nit: should we validate `folderPath` string first, is this path valid?",
+      "range": {
+        "startLine": 186,
+        "startChar": 43,
+        "endLine": 186,
+        "endChar": 53
+      },
+      "revId": "439057639bc7d4ca01ce5d5fa3391cc33fe771dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "f877d6dc_6058fb09",
         "filename": "tests/AacEncBenchmark/DynamicConfig.xml",
         "patchSetId": 2
