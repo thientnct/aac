@@ -42,6 +42,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "36174bf9_6a36fee3",
+        "filename": "tests/AacEncBenchmark/AacEncBenchmark.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1962427
+      },
+      "writtenOn": "2024-10-23T09:01:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3e2d0647_011ddb84",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 0
+      },
+      "revId": "439057639bc7d4ca01ce5d5fa3391cc33fe771dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cee3946e_520814c0",
@@ -89,6 +113,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3a1ba2b_92bf07e0",
+        "filename": "tests/AacEncBenchmark/AacEncBenchmark.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1962427
+      },
+      "writtenOn": "2024-10-23T09:01:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4748a6d9_ec2b5c6a",
+      "range": {
+        "startLine": 87,
+        "startChar": 43,
+        "endLine": 87,
+        "endChar": 47
+      },
+      "revId": "439057639bc7d4ca01ce5d5fa3391cc33fe771dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3ee7235b_352d9523",
@@ -106,6 +154,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0143179_22ecba2d",
+        "filename": "tests/AacEncBenchmark/AacEncBenchmark.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 1962427
+      },
+      "writtenOn": "2024-10-23T09:01:06Z",
+      "side": 1,
+      "message": "Shunkai,\nskipWithError can be used to skip that run of benchmark, report the error and proceed with next input data/run. The possible places where the current benchmark can run into errors are \n1) when input pcm file is not present/ unable to completely read the input/empty input\n2) when the encoder is not initialized properly\n3) when the actual encode does not happen correctly\n\nhence, for all the above cases using SkipWithError ensures the processes to stop processing further and report an error message for that particular run/input combination, and moves to next run.",
+      "parentUuid": "3ee7235b_352d9523",
+      "revId": "439057639bc7d4ca01ce5d5fa3391cc33fe771dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c4ebe275_16047a4f",
@@ -119,6 +185,30 @@
       "writtenOn": "2024-10-22T16:47:55Z",
       "side": 1,
       "message": "nit: should we validate `folderPath` string first, is this path valid?",
+      "range": {
+        "startLine": 186,
+        "startChar": 43,
+        "endLine": 186,
+        "endChar": 53
+      },
+      "revId": "439057639bc7d4ca01ce5d5fa3391cc33fe771dd",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e894e783_28cf5f59",
+        "filename": "tests/AacEncBenchmark/AacEncBenchmark.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1962427
+      },
+      "writtenOn": "2024-10-23T09:01:06Z",
+      "side": 1,
+      "message": "Shunkai,\nThe validation of entire path including pcm files were being done in readInputFile method. however, its good idea of validating the path even before registering the benchmarks which makes the test even more optimal. Thanks for the suggestion, we have updated the test accordingly",
+      "parentUuid": "c4ebe275_16047a4f",
       "range": {
         "startLine": 186,
         "startChar": 43,
