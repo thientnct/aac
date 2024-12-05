@@ -24,6 +24,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee7a0e70_22916082",
+        "filename": "tests/AacEncBenchmark/AacEncBenchmark.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1962427
+      },
+      "writtenOn": "2024-12-05T11:42:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ca9b99d_7d0d89d0",
+      "range": {
+        "startLine": 118,
+        "startChar": 12,
+        "endLine": 122,
+        "endChar": 13
+      },
+      "revId": "85a7f837253cb6fac492bfbfced292a651c60d5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6a87bb58_88a0ccde",
@@ -37,6 +61,30 @@
       "writtenOn": "2024-12-04T11:54:46Z",
       "side": 1,
       "message": "// NOTE: Calling \u0027SkipWithError(...)\u0027 does not cause the benchmark to exit\n  // the current scope immediately. If the function is called from within\n  // the \u0027KeepRunning()\u0027 loop the current iteration will finish. It is the users\n  // responsibility to exit the scope as needed.\n\nBasing on this, I think there should be a return statement after this. can you check once more with error scenarios.",
+      "range": {
+        "startLine": 162,
+        "startChar": 14,
+        "endLine": 162,
+        "endChar": 27
+      },
+      "revId": "85a7f837253cb6fac492bfbfced292a651c60d5e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa80e013_d03f33f1",
+        "filename": "tests/AacEncBenchmark/AacEncBenchmark.cpp",
+        "patchSetId": 4
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1962427
+      },
+      "writtenOn": "2024-12-05T11:42:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6a87bb58_88a0ccde",
       "range": {
         "startLine": 162,
         "startChar": 14,
