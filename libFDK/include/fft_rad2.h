@@ -115,7 +115,13 @@ amm-info@iis.fraunhofer.de
  * values.
  * \param trigDataSize length of the sinetable "trigdata".
  */
+
+#if defined(__x86__) || defined(__x86_64__)
+extern "C" void dit_fft(FIXP_DBL *x, const INT ldn, const FIXP_STP *trigdata,
+             const INT trigDataSize);
+#else
 void dit_fft(FIXP_DBL *x, const INT ldn, const FIXP_STP *trigdata,
              const INT trigDataSize);
+#endif
 
 #endif /* FFT_RAD2_H */
