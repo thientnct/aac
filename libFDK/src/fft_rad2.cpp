@@ -112,6 +112,9 @@ amm-info@iis.fraunhofer.de
 #elif defined(__GNUC__) && defined(__mips__) && defined(__mips_dsp)
 #include "mips/fft_rad2_mips.cpp"
 
+#elif defined(__x86__) || defined(__x86_64__)
+#include "x86/fft_rad2_x86.cpp"
+
 #endif
 
 /*****************************************************************************
