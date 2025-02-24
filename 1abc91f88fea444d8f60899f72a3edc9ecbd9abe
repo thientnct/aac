@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2dc33295_c5bef70c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2025-02-24T23:35:36Z",
+      "side": 1,
+      "message": "jmtrivi: intel has some codec optimizations, and normally we say \"send your patches upstream and tell us when we should sync\" but i\u0027m not sure how that\u0027s supposed to work when it\u0027s ittiam code?",
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
