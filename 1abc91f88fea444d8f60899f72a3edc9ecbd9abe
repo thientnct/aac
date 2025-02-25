@@ -16,6 +16,185 @@
       "message": "jmtrivi: intel has some codec optimizations, and normally we say \"send your patches upstream and tell us when we should sync\" but i\u0027m not sure how that\u0027s supposed to work when it\u0027s ittiam code?",
       "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4728be3e_958fe1db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2025-02-25T03:11:03Z",
+      "side": 1,
+      "message": "aac is actually fraunhofer code, but the question remains.\nFor some optimizations elsewhere (that were Ittiam code), I made sure that Ittiam knew about them and i\u0027m going to let them evaluate the changes for correctness.",
+      "parentUuid": "2dc33295_c5bef70c",
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf5aa237_28a9e0c8",
+        "filename": "libFDK/include/fft_rad2.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2025-02-25T03:11:03Z",
+      "side": 1,
+      "message": "this seems complicated and ripe for failure.  I would try go with making this\nalways \u0027extern \"C\"\u0027, regardless of the target architecture.",
+      "range": {
+        "startLine": 119,
+        "startChar": 0,
+        "endLine": 119,
+        "endChar": 43
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba50ca8e_00d1215d",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2025-02-25T03:11:03Z",
+      "side": 1,
+      "message": "I usually accomplish this by naming the file \"whatever.h\"\nand then everything assumes it\u0027s to be included by someone (in this case fft_rad2.cpp) and nobody even thinks of compiling it by itself.",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 6
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a569159f_d1019806",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2025-02-25T03:11:03Z",
+      "side": 1,
+      "message": "this seems a strange construct.\n\nwe can\u0027t enable these new functions, unless we enter here with them marked\nas not enabled. \nso from the command line -DFUNCTION_dit_fft means that... it won\u0027t be enabled\nbut without that line, it will be enabled.",
+      "range": {
+        "startLine": 118,
+        "startChar": 0,
+        "endLine": 121,
+        "endChar": 28
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "284ffa8f_1563ce9c",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2025-02-25T03:11:03Z",
+      "side": 1,
+      "message": "trailing space. based on other occurences, the file needs an\naudit for such.",
+      "range": {
+        "startLine": 358,
+        "startChar": 41,
+        "endLine": 358,
+        "endChar": 43
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d2262100_8aab8fb3",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 382,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2025-02-25T03:11:03Z",
+      "side": 1,
+      "message": "some whitespace problems here.\nempty line that has spaces (380)\ntab instead of spaces (381)\ntrailing spaces (382)\n\nI think that covers all the variants of whitespace errors.",
+      "range": {
+        "startLine": 380,
+        "startChar": 0,
+        "endLine": 382,
+        "endChar": 43
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31d84484_1d5204d7",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 625,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2025-02-25T03:11:03Z",
+      "side": 1,
+      "message": "tabs vs spaces.  and also on line 627.",
+      "range": {
+        "startLine": 625,
+        "startChar": 0,
+        "endLine": 625,
+        "endChar": 1
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f3f9a850_68683deb",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 629,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2025-02-25T03:11:03Z",
+      "side": 1,
+      "message": "how does this change-the-symbol-resolution work when combined\nwith CFI (control flow integrity) which is enabled in android builds?",
+      "range": {
+        "startLine": 629,
+        "startChar": 3,
+        "endLine": 629,
+        "endChar": 66
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
