@@ -195,6 +195,30 @@
       },
       "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59f1a7a4_28327783",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 629,
+      "author": {
+        "id": 1108919
+      },
+      "writtenOn": "2025-02-26T23:53:02Z",
+      "side": 1,
+      "message": "Elliot chatted with me today and explained how this ifunc() stuff works in conjunction with the linker/loader. That answered my CFI concerns.",
+      "parentUuid": "f3f9a850_68683deb",
+      "range": {
+        "startLine": 629,
+        "startChar": 3,
+        "endLine": 629,
+        "endChar": 66
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ]
 }
