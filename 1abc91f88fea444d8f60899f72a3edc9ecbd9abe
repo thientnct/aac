@@ -84,6 +84,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4674b366_afe1160d",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1275029
+      },
+      "writtenOn": "2025-03-04T10:39:14Z",
+      "side": 1,
+      "message": "Actually we have tried to maintain the same construct/template followed in mips and arm files for fft_rad2 implementation: https://cs.android.com/android/platform/superproject/main/+/main:external/aac/libFDK/src/arm/fft_rad2_arm.cpp.",
+      "parentUuid": "ba50ca8e_00d1215d",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 6
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a569159f_d1019806",
         "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
         "patchSetId": 1
@@ -95,6 +119,30 @@
       "writtenOn": "2025-02-25T03:11:03Z",
       "side": 1,
       "message": "this seems a strange construct.\n\nwe can\u0027t enable these new functions, unless we enter here with them marked\nas not enabled. \nso from the command line -DFUNCTION_dit_fft means that... it won\u0027t be enabled\nbut without that line, it will be enabled.",
+      "range": {
+        "startLine": 118,
+        "startChar": 0,
+        "endLine": 121,
+        "endChar": 28
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e751b20_70f31c36",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1275029
+      },
+      "writtenOn": "2025-03-04T10:39:14Z",
+      "side": 1,
+      "message": "yes and this flag \"-DFUNCTION_dit_fft\" is not currently enabled in build system.It is also maintained similar to arm \u0026 mips implementations.",
+      "parentUuid": "a569159f_d1019806",
       "range": {
         "startLine": 118,
         "startChar": 0,
@@ -128,6 +176,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "55bb4e6a_68e7fd4a",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 1275029
+      },
+      "writtenOn": "2025-03-04T10:39:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "284ffa8f_1563ce9c",
+      "range": {
+        "startLine": 358,
+        "startChar": 41,
+        "endLine": 358,
+        "endChar": 43
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d2262100_8aab8fb3",
@@ -151,6 +223,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "db1a6c5d_e6aa2873",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 382,
+      "author": {
+        "id": 1275029
+      },
+      "writtenOn": "2025-03-04T10:39:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d2262100_8aab8fb3",
+      "range": {
+        "startLine": 380,
+        "startChar": 0,
+        "endLine": 382,
+        "endChar": 43
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "31d84484_1d5204d7",
@@ -164,6 +260,30 @@
       "writtenOn": "2025-02-25T03:11:03Z",
       "side": 1,
       "message": "tabs vs spaces.  and also on line 627.",
+      "range": {
+        "startLine": 625,
+        "startChar": 0,
+        "endLine": 625,
+        "endChar": 1
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "119a4271_69a8503a",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 625,
+      "author": {
+        "id": 1275029
+      },
+      "writtenOn": "2025-03-04T10:39:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "31d84484_1d5204d7",
       "range": {
         "startLine": 625,
         "startChar": 0,
@@ -211,6 +331,30 @@
       "side": 1,
       "message": "Elliot chatted with me today and explained how this ifunc() stuff works in conjunction with the linker/loader. That answered my CFI concerns.",
       "parentUuid": "f3f9a850_68683deb",
+      "range": {
+        "startLine": 629,
+        "startChar": 3,
+        "endLine": 629,
+        "endChar": 66
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b587363_aa8765a8",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 629,
+      "author": {
+        "id": 1275029
+      },
+      "writtenOn": "2025-03-04T10:39:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "59f1a7a4_28327783",
       "range": {
         "startLine": 629,
         "startChar": 3,
