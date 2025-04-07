@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "551d96a1_add00bcd",
+        "filename": "libMpegTPDec/src/tpdec_asc.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 482,
+      "author": {
+        "id": 1546599
+      },
+      "writtenOn": "2025-04-07T14:01:26Z",
+      "side": 0,
+      "message": "These checks were added in the following commit.\nhttps://cs.android.com/android/_/android/platform/external/aac/+/36dd057c406534e077c37d5121633dd9ef6ded68",
+      "revId": "ee76460efbdb147e26d804c798949c23f174460b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
