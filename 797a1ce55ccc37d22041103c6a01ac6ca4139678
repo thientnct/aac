@@ -33,6 +33,40 @@
       "message": "merging to main branch",
       "revId": "797a1ce55ccc37d22041103c6a01ac6ca4139678",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68b03cec_d4735ab7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3227143
+      },
+      "writtenOn": "2025-04-21T10:14:53Z",
+      "side": 1,
+      "message": "Thanks for taing the change.",
+      "revId": "797a1ce55ccc37d22041103c6a01ac6ca4139678",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e025fbbf_fb41386a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3227143
+      },
+      "writtenOn": "2025-04-21T10:14:53Z",
+      "side": 1,
+      "message": "Thanks for taking the change.",
+      "revId": "797a1ce55ccc37d22041103c6a01ac6ca4139678",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
