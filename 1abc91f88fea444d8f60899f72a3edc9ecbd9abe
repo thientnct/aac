@@ -36,6 +36,24 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "76bd89d1_d0ecb138",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4345782
+      },
+      "writtenOn": "2025-12-18T07:47:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4728be3e_958fe1db",
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cf5aa237_28a9e0c8",
@@ -49,6 +67,30 @@
       "writtenOn": "2025-02-25T03:11:03Z",
       "side": 1,
       "message": "this seems complicated and ripe for failure.  I would try go with making this\nalways \u0027extern \"C\"\u0027, regardless of the target architecture.",
+      "range": {
+        "startLine": 119,
+        "startChar": 0,
+        "endLine": 119,
+        "endChar": 43
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53298f6f_0cbf191f",
+        "filename": "libFDK/include/fft_rad2.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 4345782
+      },
+      "writtenOn": "2025-12-18T07:47:37Z",
+      "side": 1,
+      "message": "we have made the change in fatcat main  branch with the \u0027extern \"C\"\u0027, applicable to all regardless of the target architecture. Can you please review there if any further comments since we are tracking them in fatcat branch:\nhttps://partner-android-review.googlesource.com/c/platform/external/aac/+/3692975",
+      "parentUuid": "cf5aa237_28a9e0c8",
       "range": {
         "startLine": 119,
         "startChar": 0,
@@ -106,6 +148,30 @@
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd93b799_123222bf",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 4345782
+      },
+      "writtenOn": "2025-12-18T07:47:37Z",
+      "side": 1,
+      "message": "As mentioned we have tried to maintain same template as used earlier for other archs. Please comment if something further needs to be addressed.",
+      "parentUuid": "4674b366_afe1160d",
+      "range": {
+        "startLine": 113,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 6
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a569159f_d1019806",
@@ -143,6 +209,30 @@
       "side": 1,
       "message": "yes and this flag \"-DFUNCTION_dit_fft\" is not currently enabled in build system.It is also maintained similar to arm \u0026 mips implementations.",
       "parentUuid": "a569159f_d1019806",
+      "range": {
+        "startLine": 118,
+        "startChar": 0,
+        "endLine": 121,
+        "endChar": 28
+      },
+      "revId": "1abc91f88fea444d8f60899f72a3edc9ecbd9abe",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "59f59e0d_f78b2ace",
+        "filename": "libFDK/src/x86/fft_rad2_x86.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 4345782
+      },
+      "writtenOn": "2025-12-18T07:47:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9e751b20_70f31c36",
       "range": {
         "startLine": 118,
         "startChar": 0,
